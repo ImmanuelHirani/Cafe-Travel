@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../public/output.css" rel="stylesheet" />
+    <link href="public/output.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -155,7 +155,7 @@
             </div>
           </div>
         </div>
-        <div id="mobilenavExpand" class="h-0 px-3 overflow-hidden transition-height">
+        <div id="mobilenavExpand" class="h-0 px-3 overflow-hidden">
           <div class="flex flex-col gap-4 mt-5 link-wrapper">
             <a href="index.html" class="text-2xl">Home</a>
             <a class="text-2xl opacity-65" href="menu.html"> Menu </a>
@@ -166,23 +166,299 @@
       </nav>
     </header>
     <main>
-      <section class="mt-16 md:mt-20 contact-us">
-        <div class="container flex flex-col items-center justify-center gap-8 md:gap-24">
-          <div class="flex flex-col items-center justify-center md:w-[40%] w-[80%] gap-3 text-center title-wrap">
-            <h2>Contact Us</h2>
-            <h6>Welcome! We appreciate your interest. For questions, feedback, or assistance, please contact us.</h6>
+      <section id="hero" class="relative flex items-center overflow-x-hidden">
+        <div class="container flex flex-col-reverse items-center gap-6 mt-10 lg:my-20 lg:gap-0 lg:flex-row">
+          <!-- Left Content -->
+          <div class="flex flex-col items-center w-full text-center gap-6 lg:gap-9 xl:w-[65%] lg:w-[60%] lg:items-start lg:text-start left-content">
+            <h1>Fusion Slice Delight Cafe</h1>
+            <h5 class="font-aesthetnova">Enjoy high-quality, homemade cafe</h5>
+            <div class="inline-flex items-center justify-center gap-2 border border-white rounded-md w-fit">
+              <a href="" class="px-6 py-2 text-lg rounded-lg 3xl:text-2xl md:px-12 md:py-3 md:text-xl font-aesthetnova">Explore Now</a>
+            </div>
           </div>
-          <div class="flex flex-col items-center grid-cols-7 gap-8 md:gap-24 md:grid content-wrapper">
-            <img src="../asset/Contact-us.png" class="w-full col-span-4" alt="" />
-            <form action="" class="flex flex-col w-full col-span-3 gap-4">
-              <label for=""><h6>Name</h6></label>
-              <input required type="text" class="w-full h-12 px-4 rounded-lg outline-none" placeholder="Your Name" />
-              <label for=""><h6>Email</h6></label>
-              <input required type="text" class="w-full h-12 px-4 rounded-lg outline-none" placeholder="Your Email" />
-              <label for=""><h6>Message</h6></label>
-              <textarea required name="" class="p-4 rounded-l outline-none" id="" rows="3" placeholder="Tell Us What Is In Your Tought"></textarea>
-              <button type="submit" class="w-full py-3 rounded-lg bg-secondary-color">Submit</button>
-            </form>
+          <!-- Right Content -->
+          <div class="flex items-center justify-center w-full xl:w-[35%] lg:w-[40%] md:w-[70%] rounded-full right-content">
+            <img src="asset/Pizza-Hero.png" class="w-full animate-spin-slow" alt="Pizza Hero Image" />
+          </div>
+        </div>
+        <video src="asset/Pizza HD_2.mp4" class="absolute inset-0 object-cover w-full h-full -z-10" loop autoplay muted></video>
+        <div class="absolute w-full h-full bg-opacity-70 bg-primary-color overlay-bg -z-10"></div>
+      </section>
+      <section id="toppings" class="flex items-center h-screen overflow-x-hidden bg-secondary-accent-color">
+        <div class="container flex flex-col items-center justify-center gap-6 md:gap-12 lg:gap-32 lg:flex-row toppings-content">
+          <div class="left-content lg:w-[60%] w-full flex flex-col lg:gap-6 gap-3">
+            <h2>Unstoppable</h2>
+            <p class="text-5xl lg:text-7xl 2xl:text-9xl">TOPPINGS</p>
+            <h6 class="text-justify lg:ml-20">
+              Cheese pizza is, obviously, perfection. But we the people, in order to form a more perfect pie, love our toppings , Here The list of our avaliable Toppings
+            </h6>
+          </div>
+          <div class="flex items-center md:gap-6 gap-3 mx-auto right-content lg:w-[40%] w-full">
+            <div class="2xl:min-w-[500px] 2xl:h-[520px] md:min-w-[450px] md:h-[450px] min-w-[300px] h-[300px] img-wrap group overflow-hidden relative">
+              <img src="asset/Topping/Topping1.jpg" class="object-cover w-full h-full" alt="" />
+              <div
+                class="absolute flex items-center justify-center w-16 h-16 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-24 md:h-24 top-3 left-3 bg-opacity-70 box-number"
+              >
+                <h3 class="items-start mt-1.5 md:mt-3">01</h3>
+              </div>
+              <div
+                class="absolute flex items-center justify-center w-full p-3 transition-all duration-300 ease-in-out translate-x-1/2 translate-y-full bg-black group-hover:-translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+              >
+                <h6 class="text-center">Peperoni</h6>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-6 md:min-w-[1000px] min-w-[600px]">
+              <div class="relative 2xl:min-w-[300px] 2xl:h-[250px] md:min-w-[150px] md:h-[215px] min-w-[150px] h-[139px] img-wrap group overflow-hidden">
+                <img src="asset/Topping/Topping2.png" class="object-cover w-full h-full" alt="" />
+                <div
+                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
+                >
+                  <h5 class="items-start md:mt-3 mt-1.5">02</h5>
+                </div>
+                <div
+                  class="absolute flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 translate-y-full bg-black group-hover:-translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+                >
+                  <h6 class="text-center">Mushroom</h6>
+                </div>
+              </div>
+              <div class="relative 2xl:min-w-[300px] 2xl:h-[250px] md:min-w-[150px] md:h-[215px] min-w-[150px] h-[139px] img-wrap group overflow-hidden">
+                <img src="asset/Topping/Topping3.png" class="object-cover w-full h-full" alt="" />
+                <div
+                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
+                >
+                  <h5 class="items-start md:mt-3 mt-1.5">03</h5>
+                </div>
+                <div
+                  class="absolute flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 translate-y-full bg-black group-hover:-translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+                >
+                  <h6 class="text-center">Onion</h6>
+                </div>
+              </div>
+              <div class="relative 2xl:min-w-[300px] 2xl:h-[250px] md:min-w-[150px] md:h-[215px] min-w-[150px] h-[139px] img-wrap group overflow-hidden">
+                <img src="asset/Topping/Topping4.png" class="object-cover w-full h-full" alt="" />
+                <div
+                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
+                >
+                  <h5 class="items-start md:mt-3 mt-1.5">04</h5>
+                </div>
+                <div
+                  class="absolute flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 translate-y-full bg-black group-hover:-translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+                >
+                  <h6 class="text-center">Sausage</h6>
+                </div>
+              </div>
+              <div class="relative 2xl:min-w-[300px] 2xl:h-[250px] md:min-w-[150px] md:h-[215px] min-w-[150px] h-[139px] img-wrap group overflow-hidden">
+                <img src="asset/Topping/Topping5.png" class="object-cover w-full h-full" alt="" />
+                <div
+                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
+                >
+                  <h5 class="items-start md:mt-3 mt-1.5">05</h5>
+                </div>
+                <div
+                  class="absolute flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 translate-y-full bg-black group-hover:-translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+                >
+                  <h6 class="text-center">Cheese</h6>
+                </div>
+              </div>
+              <div class="relative 2xl:min-w-[300px] 2xl:h-[250px] md:min-w-[150px] md:h-[215px] min-w-[150px] h-[139px] img-wrap group overflow-hidden">
+                <img src="asset/Topping/Topping6.png" class="object-cover w-full h-full" alt="" />
+                <div
+                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
+                >
+                  <h5 class="items-start md:mt-3 mt-1.5">06</h5>
+                </div>
+                <div
+                  class="absolute flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 translate-y-full bg-black group-hover:-translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+                >
+                  <h6 class="text-center">Tomato</h6>
+                </div>
+              </div>
+              <div class="relative 2xl:min-w-[300px] 2xl:h-[250px] md:min-w-[150px] md:h-[215px] min-w-[150px] h-[139px] img-wrap group overflow-hidden">
+                <img src="asset/Topping/Topping5.png" class="object-cover w-full h-full" alt="" />
+                <div
+                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
+                >
+                  <h5 class="items-start md:mt-3 mt-1.5">07</h5>
+                </div>
+                <div
+                  class="absolute flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 translate-y-full bg-black group-hover:-translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+                >
+                  <h6 class="text-center">Peperoni</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="custom-order" class="overflow-x-hidden">
+        <div class="flex flex-col gap-4 md:gap-12">
+          <div class="p-4 text-center title">
+            <h5>But pizza-lovers weren't afraid to Custom Their Own Pizza ingredients.</h5>
+          </div>
+          <div class="w-full overflow-x-hidden swiper">
+            <div class="customTopping">
+              <div class="swiper-wrapper">
+                <div class="relative rounded-2xl swiper-slide">
+                  <div class="content-topping">
+                    <img src="asset/Topping/Chocco.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                  </div>
+                  <figcaption
+                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
+                  >
+                    <h6>Dark Chocolate</h6>
+                  </figcaption>
+                </div>
+                <div class="relative rounded-2xl swiper-slide">
+                  <div class="content-topping">
+                    <img src="asset/Topping/Cheess.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                  </div>
+                  <figcaption
+                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
+                  >
+                    <h6>Chees</h6>
+                  </figcaption>
+                </div>
+                <div class="relative rounded-2xl swiper-slide">
+                  <div class="content-topping">
+                    <img src="asset/Topping/Peanute.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                  </div>
+                  <figcaption
+                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
+                  >
+                    <h6>Peanute</h6>
+                  </figcaption>
+                </div>
+                <div class="relative rounded-2xl swiper-slide">
+                  <div class="content-topping">
+                    <img src="asset/Topping/Chocco.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                  </div>
+                  <figcaption
+                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
+                  >
+                    <h6>Nuttela Chocolate</h6>
+                  </figcaption>
+                </div>
+                <div class="relative rounded-2xl swiper-slide">
+                  <div class="content-topping">
+                    <img src="asset/Topping/Cheess.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                  </div>
+                  <figcaption
+                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
+                  >
+                    <h6>MozaRella</h6>
+                  </figcaption>
+                </div>
+                <div class="relative rounded-2xl swiper-slide">
+                  <div class="content-topping">
+                    <img src="asset/Topping/Peanute.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                  </div>
+                  <figcaption
+                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
+                  >
+                    <h6>Peanute</h6>
+                  </figcaption>
+                </div>
+                <div class="relative rounded-2xl swiper-slide">
+                  <div class="content-topping">
+                    <img src="asset/Topping/Chocco.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                  </div>
+                  <figcaption
+                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
+                  >
+                    <h6>Slime Choco</h6>
+                  </figcaption>
+                </div>
+                <div class="relative rounded-2xl swiper-slide">
+                  <div class="content-topping">
+                    <img src="asset/Topping/Cheess.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                  </div>
+                  <figcaption
+                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
+                  >
+                    <h6>Cheedar Cheess</h6>
+                  </figcaption>
+                </div>
+                <div class="relative rounded-2xl swiper-slide">
+                  <div class="content-topping">
+                    <img src="asset/Topping/Peanute.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                  </div>
+                  <figcaption
+                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
+                  >
+                    <h6>Peanute butter</h6>
+                  </figcaption>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container relative flex items-center justify-between w-full">
+            <div class="flex gap-4 swiper-custom-nav">
+              <svg
+                id="prev"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 42 42"
+                class="relative stroke-accent-color w-10 transition-all duration-300 ease-in-out md:w-[52px] opacity-30 hover:opacity-100"
+                fill="none"
+              >
+                <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" />
+                <path d="M28 21H14M14 21L18 17M14 21L18 25" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <svg
+                id="next"
+                xmlns="http://www.w3.org/2000/svg"
+                class="relative w-10 transition-all duration-300 stroke-accent-color ease-in-out md:w-[52px] opacity-30 hover:opacity-100"
+                viewBox="0 0 42 42"
+                fill="none"
+              >
+                <rect x="41.5" y="41.5" width="41" height="41" rx="20.5" transform="rotate(-180 41.5 41.5)" />
+                <path d="M14 21L28 21M28 21L24 25M28 21L24 17" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="inline-flex items-center justify-center gap-2 border border-white rounded-md w-fit">
+              <a href="" class="px-6 py-2 text-sm rounded-lg md:px-12 md:py-3 md:text-xl font-aesthetnova">Custom Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="more-menu" class="overflow-x-hidden bg-secondary-accent-color">
+        <div class="container">
+          <div class="flex flex-col items-center gap-6 text-center xl:gap-12 headline-content">
+            <h2>Wait , There's More</h2>
+            <hr class="w-1/2" />
+            <h6 class="font-aesthetnova">
+              In this cafe, we serve more than just pizza. Enjoy our rich coffee and refreshing bubble ice desserts, adding a sweet touch to your day. Whether it's a meal or a moment of relaxation,
+              our menu brings extra flavor to life's journey.
+            </h6>
+          </div>
+          <div class="flex flex-col gap-10 mt-6 lg:gap-20 lg:mt-20 main-content">
+            <div class="flex flex-col items-center grid-cols-2 gap-4 lg:grid md:gap-12 coffee">
+              <img src="asset/Coffe menu/capuccino Coffe.jpg" class="rounded-[20px] 3xl:w-[750px] xl:w-[536px] w-full 3xl:h-[450px] h-[347px] object-cover" alt="" />
+              <div class="flex flex-col gap-4 md:gap-8 desc-content">
+                <h4>Capuccino Coffee</h4>
+                <p class="text-base text-justify md:text-2xl font-aesthetnova">
+                  In this cup, a rich coffee with beautiful latte art is served, bringing warmth and a delightful aroma. This coffee is perfectly brewed to offer an ideal moment of relaxation,
+                  enhancing your day with an elegant and satisfying indulgence.
+                </p>
+                <a href="" class="flex items-center justify-center w-full px-6 py-2 text-lg border border-white rounded-md ms-auto md:w-fit md:px-12 md:py-3 md:text-xl font-aesthetnova"
+                  >See More Coffee Menu</a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col-reverse items-center justify-between grid-cols-2 gap-4 md:gap-12 lg:grid bubble">
+              <div class="flex flex-col gap-4 md:gap-8 desc-content">
+                <h4>Melted Choco Bubble</h4>
+                <p class="text-base text-justify md:text-2xl font-aesthetnova">
+                  This drink is a refreshing bubble ice, featuring a sweet touch and the chewy texture of enticing boba pearls. Cold and delicious, it offers perfect refreshment, adding enjoyment to
+                  every sip and complementing your relaxing experience at our café.
+                </p>
+                <a href="" class="flex items-center justify-center w-full px-6 py-2 text-lg border border-white rounded-md md:w-fit md:px-12 md:py-3 md:text-xl font-aesthetnova"
+                  >See more Bubble Menu</a
+                >
+              </div>
+              <div class="flex w-full place-content-end wrap">
+                <img src="asset/Booba Menu/Choco bobba.jpg" class="rounded-[20px] 3xl:w-[750px] xl:w-[536px] w-full 3xl:h-[450px] h-[347px] object-cover" alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -198,7 +474,7 @@
                   <!-- Repeat this block for each item -->
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center w-full rounded-lg shadow-xl bg-secondary-accent-color max-h-fit outline outline-1 outline-highlight-content">
-                      <img src="../asset/Booba Menu/Choco bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
+                      <img src="asset/Booba Menu/Choco bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
                       <div class="flex items-center justify-between w-full p-4 wrap">
                         <div class="flex flex-col">
                           <p class="text-xl">Sicilian Pizza</p>
@@ -222,7 +498,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center w-full rounded-lg shadow-xl bg-secondary-accent-color max-h-fit outline outline-1 outline-highlight-content">
-                      <img src="../asset/Booba Menu/Brown Sugar Syrup and Milk Tea bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
+                      <img src="asset/Booba Menu/Brown Sugar Syrup and Milk Tea bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
                       <div class="flex items-center justify-between w-full p-4 wrap">
                         <div class="flex flex-col">
                           <p class="text-xl">Sicilian Pizza</p>
@@ -246,7 +522,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center w-full rounded-lg shadow-xl bg-secondary-accent-color max-h-fit outline outline-1 outline-highlight-content">
-                      <img src="../asset/Booba Menu/Oreo Bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
+                      <img src="asset/Booba Menu/Oreo Bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
                       <div class="flex items-center justify-between w-full p-4 wrap">
                         <div class="flex flex-col">
                           <p class="text-xl">Sicilian Pizza</p>
@@ -270,7 +546,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center w-full rounded-lg shadow-xl bg-secondary-accent-color max-h-fit outline outline-1 outline-highlight-content">
-                      <img src="../asset/Booba Menu/Milk bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
+                      <img src="asset/Booba Menu/Milk bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
                       <div class="flex items-center justify-between w-full p-4 wrap">
                         <div class="flex flex-col">
                           <p class="text-xl">Sicilian Pizza</p>
@@ -314,7 +590,7 @@
                 <div class="space-y-6 swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center md:p-0 p-0.5 md:flex-row gap-x-6 md:gap-y-0 gap-y-3">
-                      <img src="../asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
+                      <img src="asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
                       <div class="flex flex-col w-full gap-2 md:gap-3 text-wrap">
                         <p class="text-xl font-semibold md:text-lg line-clamp-1">Capuccino Coffee</p>
                         <p class="text-xl md:text-lg text-highlight-content">Extra</p>
@@ -412,7 +688,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center md:p-0 p-0.5 md:flex-row gap-x-6 md:gap-y-0 gap-y-3">
-                      <img src="../asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
+                      <img src="asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
                       <div class="flex flex-col w-full gap-2 md:gap-3 text-wrap">
                         <p class="text-xl font-semibold md:text-lg line-clamp-1">Capuccino Coffee</p>
                         <p class="text-xl md:text-lg text-highlight-content">Extra</p>
@@ -510,7 +786,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center md:p-0 p-0.5 md:flex-row gap-x-6 md:gap-y-0 gap-y-3">
-                      <img src="../asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
+                      <img src="asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
                       <div class="flex flex-col w-full gap-2 md:gap-3 text-wrap">
                         <p class="text-xl font-semibold md:text-lg line-clamp-1">Capuccino Coffee</p>
                         <p class="text-xl md:text-lg text-highlight-content">Extra</p>
@@ -608,7 +884,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center md:p-0 p-0.5 md:flex-row gap-x-6 md:gap-y-0 gap-y-3">
-                      <img src="../asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
+                      <img src="asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
                       <div class="flex flex-col w-full gap-2 md:gap-3 text-wrap">
                         <p class="text-xl font-semibold md:text-lg line-clamp-1">Capuccino Coffee</p>
                         <p class="text-xl md:text-lg text-highlight-content">Extra</p>
@@ -721,6 +997,102 @@
           </div>
         </div>
       </div>
+      <!-- Login & register Box -->
+      <div id="LoginRegisterBox" class="fixed inset-0 z-50 flex items-center justify-center invisible bg-black opacity-0 bg-opacity-70 add-to-cart-quick-list font-aesthetnova">
+        <div
+          id="LoginBox"
+          class="relative flex flex-col md:flex-row w-[90%] justify-center overflow-hidden md:w-[45%] h-fit md:h-[550px] p-4 md:p-8 gap-6 md:gap-9 rounded-lg bg-secondary-accent-color box-cart"
+        >
+          <h5 class="absolute mt-3 text-gray-300 translate-x-1/2 right-1/2">Login</h5>
+          <form action="" class="flex flex-col justify-center w-[90%] col-span-3 gap-4">
+            <div class="relative">
+              <input required type="text" class="w-full h-12 border-b-[1px] border-white bg-transparent outline-none" placeholder="Username / Email" />
+              <svg class="absolute right-0 w-6 h-6 bottom-2" fill="white" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <g data-name="8-Email" id="_8-Email">
+                  <path
+                    d="M45,7H3a3,3,0,0,0-3,3V38a3,3,0,0,0,3,3H45a3,3,0,0,0,3-3V10A3,3,0,0,0,45,7Zm-.64,2L24,24.74,3.64,9ZM2,37.59V10.26L17.41,22.17ZM3.41,39,19,23.41l4.38,3.39a1,1,0,0,0,1.22,0L29,23.41,44.59,39ZM46,37.59,30.59,22.17,46,10.26Z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div class="relative">
+              <input required type="text" class="w-full h-12 border-b-[1px] border-white bg-transparent outline-none" placeholder="Password" />
+              <svg class="absolute right-0 w-6 h-6 bottom-2" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12,4 C14.7275481,4 17.3356792,5.4306247 19.76629,7.78114976 C20.5955095,8.58304746 21.3456935,9.43915664 22.0060909,10.2956239 C22.4045936,10.8124408 22.687526,11.2189945 22.8424353,11.4612025 L23.1870348,12 L22.8424353,12.5387975 C22.687526,12.7810055 22.4045936,13.1875592 22.0060909,13.7043761 C21.3456935,14.5608434 20.5955095,15.4169525 19.76629,16.2188502 C17.3356792,18.5693753 14.7275481,20 12,20 C9.27245185,20 6.66432084,18.5693753 4.23371003,16.2188502 C3.40449054,15.4169525 2.65430652,14.5608434 1.99390911,13.7043761 C1.59540638,13.1875592 1.31247398,12.7810055 1.15756471,12.5387975 L0.812965202,12 L1.15756471,11.4612025 C1.31247398,11.2189945 1.59540638,10.8124408 1.99390911,10.2956239 C2.65430652,9.43915664 3.40449054,8.58304746 4.23371003,7.78114976 C6.66432084,5.4306247 9.27245185,4 12,4 Z M20.4222529,11.5168761 C19.8176112,10.7327184 19.1301624,9.94820254 18.37596,9.21885024 C16.2825083,7.1943753 14.1050769,6 12,6 C9.89492315,6 7.71749166,7.1943753 5.62403997,9.21885024 C4.86983759,9.94820254 4.18238879,10.7327184 3.57774714,11.5168761 C3.44715924,11.6862352 3.32648802,11.8478224 3.21616526,12 C3.32648802,12.1521776 3.44715924,12.3137648 3.57774714,12.4831239 C4.18238879,13.2672816 4.86983759,14.0517975 5.62403997,14.7811498 C7.71749166,16.8056247 9.89492315,18 12,18 C14.1050769,18 16.2825083,16.8056247 18.37596,14.7811498 C19.1301624,14.0517975 19.8176112,13.2672816 20.4222529,12.4831239 C20.5528408,12.3137648 20.673512,12.1521776 20.7838347,12 C20.673512,11.8478224 20.5528408,11.6862352 20.4222529,11.5168761 Z M12,16 C9.790861,16 8,14.209139 8,12 C8,9.790861 9.790861,8 12,8 C14.209139,8 16,9.790861 16,12 C16,14.209139 14.209139,16 12,16 Z M12,14 C13.1045695,14 14,13.1045695 14,12 C14,10.8954305 13.1045695,10 12,10 C10.8954305,10 10,10.8954305 10,12 C10,13.1045695 10.8954305,14 12,14 Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <button type="submit" class="w-full py-3 mt-3 rounded-lg bg-secondary-color">Login</button>
+            <p class="text-center">Don't Have Account ? <span id="RegisterBoxOpen" class="text-red-500 cursor-pointer">Sign Up</span></p>
+          </form>
+          <img src="asset/Bobba-login.png" class="absolute w-[10%] bottom-0 right-0" alt="" />
+          <img src="asset/Coffe-Login.png" class="absolute w-[8%] top-0 left-0" alt="" />
+          <img src="asset/Pizza-Hero.png" class="absolute translate-x-1/2 right-1/2 xl:w-fit w-[10%] -bottom-[53%]" alt="" />
+          <!-- Close Button -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="absolute cursor-pointer closeloginBox top-6 right-6" width="20" height="20" viewBox="0 0 12 12" fill="none">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.29289 0.29289C0.68342 -0.09763 1.31658 -0.09763 1.70711 0.29289L6 4.58579L10.2929 0.29289C10.6834 -0.09763 11.3166 -0.09763 11.7071 0.29289C12.0976 0.68342 12.0976 1.31658 11.7071 1.70711L7.4142 6L11.7071 10.2929C12.0976 10.6834 12.0976 11.3166 11.7071 11.7071C11.3166 12.0976 10.6834 12.0976 10.2929 11.7071L6 7.4142L1.70711 11.7071C1.31658 12.0976 0.68342 12.0976 0.29289 11.7071C-0.09763 11.3166 -0.09763 10.6834 0.29289 10.2929L4.58579 6L0.29289 1.70711C-0.09763 1.31658 -0.09763 0.68342 0.29289 0.29289Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <div
+          id="RegisterBox"
+          class="flex flex-col absolute opacity-0 bottom-1/2 invisible translate-y-1/2 md:flex-row w-[90%] justify-center overflow-hidden md:w-[45%] h-fit md:h-[550px] p-4 md:p-8 gap-6 md:gap-9 rounded-lg bg-secondary-accent-color box-cart"
+        >
+          <h5 class="absolute mt-3 text-gray-300 translate-x-1/2 right-1/2">Register</h5>
+          <form action="" class="flex flex-col justify-center w-[90%] col-span-3 gap-4">
+            <div class="relative">
+              <input required type="text" class="w-full h-12 border-b-[1px] border-white bg-transparent outline-none" placeholder="Email" />
+              <svg class="absolute right-0 w-6 h-6 bottom-2" fill="white" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <g data-name="8-Email" id="_8-Email">
+                  <path
+                    d="M45,7H3a3,3,0,0,0-3,3V38a3,3,0,0,0,3,3H45a3,3,0,0,0,3-3V10A3,3,0,0,0,45,7Zm-.64,2L24,24.74,3.64,9ZM2,37.59V10.26L17.41,22.17ZM3.41,39,19,23.41l4.38,3.39a1,1,0,0,0,1.22,0L29,23.41,44.59,39ZM46,37.59,30.59,22.17,46,10.26Z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div class="relative">
+              <input required type="text" class="w-full h-12 border-b-[1px] border-white bg-transparent outline-none" placeholder="Phone Number" />
+              <svg class="absolute right-0 w-6 h-6 bottom-2" fill="white" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.1182 14.702L14 15.5C11.2183 14.1038 9.5 12.5 8.5 10L9.26995 5.8699L7.81452 2L4.0636 2C2.93605 2 2.04814 2.93178 2.21654 4.04668C2.63695 6.83 3.87653 11.8765 7.5 15.5C11.3052 19.3052 16.7857 20.9564 19.802 21.6127C20.9668 21.8662 22 20.9575 22 19.7655L22 16.1812L18.1182 14.702Z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="relative">
+              <input required type="text" class="w-full h-12 border-b-[1px] border-white bg-transparent outline-none" placeholder="Password" />
+              <svg class="absolute right-0 w-6 h-6 bottom-2" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12,4 C14.7275481,4 17.3356792,5.4306247 19.76629,7.78114976 C20.5955095,8.58304746 21.3456935,9.43915664 22.0060909,10.2956239 C22.4045936,10.8124408 22.687526,11.2189945 22.8424353,11.4612025 L23.1870348,12 L22.8424353,12.5387975 C22.687526,12.7810055 22.4045936,13.1875592 22.0060909,13.7043761 C21.3456935,14.5608434 20.5955095,15.4169525 19.76629,16.2188502 C17.3356792,18.5693753 14.7275481,20 12,20 C9.27245185,20 6.66432084,18.5693753 4.23371003,16.2188502 C3.40449054,15.4169525 2.65430652,14.5608434 1.99390911,13.7043761 C1.59540638,13.1875592 1.31247398,12.7810055 1.15756471,12.5387975 L0.812965202,12 L1.15756471,11.4612025 C1.31247398,11.2189945 1.59540638,10.8124408 1.99390911,10.2956239 C2.65430652,9.43915664 3.40449054,8.58304746 4.23371003,7.78114976 C6.66432084,5.4306247 9.27245185,4 12,4 Z M20.4222529,11.5168761 C19.8176112,10.7327184 19.1301624,9.94820254 18.37596,9.21885024 C16.2825083,7.1943753 14.1050769,6 12,6 C9.89492315,6 7.71749166,7.1943753 5.62403997,9.21885024 C4.86983759,9.94820254 4.18238879,10.7327184 3.57774714,11.5168761 C3.44715924,11.6862352 3.32648802,11.8478224 3.21616526,12 C3.32648802,12.1521776 3.44715924,12.3137648 3.57774714,12.4831239 C4.18238879,13.2672816 4.86983759,14.0517975 5.62403997,14.7811498 C7.71749166,16.8056247 9.89492315,18 12,18 C14.1050769,18 16.2825083,16.8056247 18.37596,14.7811498 C19.1301624,14.0517975 19.8176112,13.2672816 20.4222529,12.4831239 C20.5528408,12.3137648 20.673512,12.1521776 20.7838347,12 C20.673512,11.8478224 20.5528408,11.6862352 20.4222529,11.5168761 Z M12,16 C9.790861,16 8,14.209139 8,12 C8,9.790861 9.790861,8 12,8 C14.209139,8 16,9.790861 16,12 C16,14.209139 14.209139,16 12,16 Z M12,14 C13.1045695,14 14,13.1045695 14,12 C14,10.8954305 13.1045695,10 12,10 C10.8954305,10 10,10.8954305 10,12 C10,13.1045695 10.8954305,14 12,14 Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <button type="submit" class="w-full py-3 mt-3 rounded-lg bg-secondary-color">Register</button>
+            <p class="text-center">Already Have Account? <span id="LoginBoxOpen" class="text-red-500 cursor-pointer">Sign In</span></p>
+          </form>
+          <img src="asset/Bobba-login.png" class="absolute w-[10%] bottom-0 right-0" alt="" />
+          <img src="asset/Coffe-Login.png" class="absolute w-[8%] top-0 left-0" alt="" />
+          <img src="asset/Pizza-Hero.png" class="absolute translate-x-1/2 right-1/2 xl:w-fit w-[10%] -bottom-[53%]" alt="" />
+          <!-- Close Button -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="absolute cursor-pointer closeloginBox top-6 right-6" width="20" height="20" viewBox="0 0 12 12" fill="none">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.29289 0.29289C0.68342 -0.09763 1.31658 -0.09763 1.70711 0.29289L6 4.58579L10.2929 0.29289C10.6834 -0.09763 11.3166 -0.09763 11.7071 0.29289C12.0976 0.68342 12.0976 1.31658 11.7071 1.70711L7.4142 6L11.7071 10.2929C12.0976 10.6834 12.0976 11.3166 11.7071 11.7071C11.3166 12.0976 10.6834 12.0976 10.2929 11.7071L6 7.4142L1.70711 11.7071C1.31658 12.0976 0.68342 12.0976 0.29289 11.7071C-0.09763 11.3166 -0.09763 10.6834 0.29289 10.2929L4.58579 6L0.29289 1.70711C-0.09763 1.31658 -0.09763 0.68342 0.29289 0.29289Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+      </div>
     </main>
     <footer class="flex flex-col bg-secondary-accent-color font-aesthetnova">
       <div class="container flex flex-col gap-12 py-12 md:py-20">
@@ -786,41 +1158,41 @@
         <div class="img-showcase-food">
           <div class="grid grid-cols-6 swiper-wrapper">
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Logo/Pizza Menu/Meat Lovers.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Logo/Pizza Menu/Meat Lovers.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Logo/Pizza Menu/Blackpaper.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Logo/Pizza Menu/Blackpaper.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Coffe menu/Caramel Hazelnut Iced Coffee.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Coffe menu/Caramel Hazelnut Iced Coffee.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Coffe menu/capuccino Coffe.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Coffe menu/capuccino Coffe.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Coffe menu/Dalgona Coffee.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Coffe menu/Dalgona Coffee.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Booba Menu/Milk bobba.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Booba Menu/Milk bobba.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <!-- Left -->
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Logo/Pizza Menu/Chicken.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Logo/Pizza Menu/Chicken.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Coffe menu/Dalgona Coffee.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Coffe menu/Dalgona Coffee.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Logo/Pizza Menu/Peperoni.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Logo/Pizza Menu/Peperoni.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Coffe menu/Caramel Machiato.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Coffe menu/Caramel Machiato.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Booba Menu/Matcha.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Booba Menu/Matcha.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Booba Menu/Oreo Bobba.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Booba Menu/Oreo Bobba.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
           </div>
         </div>
@@ -832,8 +1204,40 @@
     AOS.init();
   </script> -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="../js/swiper.js"></script>
-  <script src="../js/GSAP.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/GSAP.js"></script>
   <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-  <script src="../js/sidebar.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script>
+    const LoginRegisterBox = document.getElementById("LoginRegisterBox"),
+      loginRegisterTrigger = document.getElementById("loginRegisterTrigger"),
+      LoginBox = document.getElementById("LoginBox"),
+      RegisterBox = document.getElementById("RegisterBox"),
+      RegisterBoxOpen = document.getElementById("RegisterBoxOpen"),
+      LoginBoxOpen = document.getElementById("LoginBoxOpen"),
+      closeloginBox = document.querySelectorAll(".closeloginBox"); // Added missing class selector
+
+    loginRegisterTrigger.addEventListener("click", () => {
+      LoginRegisterBox.classList.add("box-registLogin-active");
+    });
+
+    RegisterBoxOpen.addEventListener("click", () => {
+      RegisterBox.classList.add("RegisterBox-Active");
+      LoginBox.classList.remove("LoginBox-Active");
+    });
+
+    LoginBoxOpen.addEventListener("click", () => {
+      LoginBox.classList.add("LoginBox-Active");
+      RegisterBox.classList.remove("RegisterBox-Active");
+    });
+
+    closeloginBox.forEach((element) => {
+      element.addEventListener("click", () => {
+        // Added event listener for each close button
+        LoginRegisterBox.classList.remove("box-registLogin-active");
+        RegisterBox.classList.remove("RegisterBox-Active");
+        LoginBox.classList.remove("LoginBox-Active");
+      });
+    });
+  </script>
 </html>

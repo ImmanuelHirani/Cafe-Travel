@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../public/output.css" rel="stylesheet" />
+    <link href="public/output.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -166,83 +166,23 @@
       </nav>
     </header>
     <main>
-      <section class="mt-14 md:mt-20 cart">
-        <div class="container">
-          <div class="flex flex-col grid-cols-12 gap-4 md:grid">
-            <div class="col-span-6 transition-all duration-300 ease-in-out box-cart font-aesthetnova">
-              <div class="flex flex-col p-2.5 rounded-lg md:p-8 gap-y-8 content-body bg-secondary-accent-color">
-                <div class="box-status-order bg-[#D4EDDA] py-4 rounded-lg px-8">
-                  <p class="text-[#185C26] md:text-lg text-sm font-semibold text-center">Order successfully created , please continue payment for your order</p>
-                </div>
-                <!-- Repeted Content -->
-                <div class="flex flex-col items-center justify-between md:p-0 p-0.5 md:flex-row md:gap-y-0 gap-y-3">
-                  <img src="../asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-52 3xl:w-96 3xl:h-60 md:w-64 md:h-44" />
-                  <div class="flex flex-col w-full gap-2 md:w-fit text-wrap">
-                    <p class="text-xl font-semibold md:text-lg line-clamp-1">Capuccino Coffee</p>
-                    <p class="text-xl md:text-lg text-highlight-content">Extra</p>
-                    <div class="flex wrap">
-                      <p class="text-xl md:text-lg">Rp 1.500.000</p>
-                    </div>
-                  </div>
-                  <div class="w-full px-4 py-2 rounded-full md:w-fit quantity-area bg-secondary-color">
-                    <p class="text-xl text-center md:text-base ms-auto">Qty : X 1</p>
-                  </div>
-                </div>
-                <div class="flex flex-col items-center justify-between md:p-0 p-0.5 md:flex-row md:gap-y-0 gap-y-3">
-                  <img src="../asset/Booba Menu/Choco bobba.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-52 3xl:w-96 3xl:h-60 md:w-64 md:h-44" />
-                  <div class="flex flex-col w-full gap-2 md:w-fit text-wrap">
-                    <p class="text-xl font-semibold md:text-lg line-clamp-1">Capuccino Coffee</p>
-                    <p class="text-xl md:text-lg text-highlight-content">Extra</p>
-                    <div class="flex wrap">
-                      <p class="text-xl md:text-lg">Rp 1.500.000</p>
-                    </div>
-                  </div>
-                  <div class="w-full px-4 py-2 rounded-full md:w-fit quantity-area bg-secondary-color">
-                    <p class="text-xl text-center md:text-base ms-auto">Qty : X 1</p>
-                  </div>
-                </div>
-                <!-- Repeted Content end -->
-                <hr class="border-[1px] border-gray-500" />
-                <div class="flex flex-col gap-3 wrap">
-                  <span class="flex items-center justify-between"
-                    ><p class="text-lg">Subtotal</p>
-                    <p class="text-lg">Rp 1.500.000</p>
-                  </span>
-                  <span class="flex items-center justify-between">
-                    <p class="flex items-center gap-3 text-lg text-highlight-content">
-                      Shipping
-                      <img src="../asset/QuestionMark-Shipping.png" class="w-[10%]" alt="" />
-                    </p>
-                    <p class="text-lg text-highlight-content">Rp. 20.000</p>
-                  </span>
-                  <span class="flex items-center justify-between"
-                    ><p class="text-lg">Total Payment</p>
-                    <p class="text-lg">Rp 1.520.000</p>
-                  </span>
-                </div>
-                <button class="self-end w-full gap-3 py-3 text-base transition-all duration-300 ease-in-out rounded-lg bg-secondary-color">Cancle Order</button>
-              </div>
-            </div>
-            <div class="col-span-6 row-auto gap-4 text-base md:text-lg">
-              <div class="sticky flex flex-col w-full gap-4 rounded-lg h-fit top-36 box-Location font-aesthetnova bg-secondary-accent-color">
-                <div class="px-4 py-4 rounded-t-lg bg-secondary-color header body md:px-8">
-                  <p class="uppercase">Payment Method</p>
-                </div>
-                <div class="px-4 py-4 body md:px-8">
-                  <div class="user-quick-details flex items-center justify-between gap-0.5">
-                    <img src="../asset/Payment/Midtrans.png" class="md:w-[25%] w-[40%]" alt="" />
-                    <input
-                      type="checkbox"
-                      class="w-5 h-5 transition-all duration-300 ease-in-out bg-transparent border-2 rounded-full appearance-none cursor-pointer border-highlight-content checked:bg-highlight-content checked:border-highlight-content hover:border-none hover:bg-highlight-content"
-                    />
-                  </div>
-                </div>
-                <div class="flex flex-col items-center justify-between gap-4 px-4 py-4 md:gap-0 md:flex-row md:px-8 footer">
-                  <p class="text-sm text-highlight-content">Order That Been Pay Cannot Be Cancle *</p>
-                  <button class="self-end w-full gap-3 px-2 py-2 text-base transition-all duration-300 ease-in-out rounded-lg md:w-fit 2xl:px-12 bg-secondary-color">Pay Now</button>
-                </div>
-              </div>
-            </div>
+      <section class="mt-16 md:mt-20 contact-us">
+        <div class="container flex flex-col items-center justify-center gap-8 md:gap-24">
+          <div class="flex flex-col items-center justify-center md:w-[40%] w-[80%] gap-3 text-center title-wrap">
+            <h2>Contact Us</h2>
+            <h6>Welcome! We appreciate your interest. For questions, feedback, or assistance, please contact us.</h6>
+          </div>
+          <div class="flex flex-col items-center grid-cols-7 gap-8 md:gap-24 md:grid content-wrapper">
+            <img src="asset/Contact-us.png" class="w-full col-span-4" alt="" />
+            <form action="" class="flex flex-col w-full col-span-3 gap-4">
+              <label for=""><h6>Name</h6></label>
+              <input required type="text" class="w-full h-12 px-4 rounded-lg outline-none" placeholder="Your Name" />
+              <label for=""><h6>Email</h6></label>
+              <input required type="text" class="w-full h-12 px-4 rounded-lg outline-none" placeholder="Your Email" />
+              <label for=""><h6>Message</h6></label>
+              <textarea required name="" class="p-4 rounded-l outline-none" id="" rows="3" placeholder="Tell Us What Is In Your Tought"></textarea>
+              <button type="submit" class="w-full py-3 rounded-lg bg-secondary-color">Submit</button>
+            </form>
           </div>
         </div>
       </section>
@@ -258,7 +198,7 @@
                   <!-- Repeat this block for each item -->
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center w-full rounded-lg shadow-xl bg-secondary-accent-color max-h-fit outline outline-1 outline-highlight-content">
-                      <img src="../asset/Booba Menu/Choco bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
+                      <img src="asset/Booba Menu/Choco bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
                       <div class="flex items-center justify-between w-full p-4 wrap">
                         <div class="flex flex-col">
                           <p class="text-xl">Sicilian Pizza</p>
@@ -282,7 +222,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center w-full rounded-lg shadow-xl bg-secondary-accent-color max-h-fit outline outline-1 outline-highlight-content">
-                      <img src="../asset/Booba Menu/Brown Sugar Syrup and Milk Tea bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
+                      <img src="asset/Booba Menu/Brown Sugar Syrup and Milk Tea bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
                       <div class="flex items-center justify-between w-full p-4 wrap">
                         <div class="flex flex-col">
                           <p class="text-xl">Sicilian Pizza</p>
@@ -306,7 +246,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center w-full rounded-lg shadow-xl bg-secondary-accent-color max-h-fit outline outline-1 outline-highlight-content">
-                      <img src="../asset/Booba Menu/Oreo Bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
+                      <img src="asset/Booba Menu/Oreo Bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
                       <div class="flex items-center justify-between w-full p-4 wrap">
                         <div class="flex flex-col">
                           <p class="text-xl">Sicilian Pizza</p>
@@ -330,7 +270,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center w-full rounded-lg shadow-xl bg-secondary-accent-color max-h-fit outline outline-1 outline-highlight-content">
-                      <img src="../asset/Booba Menu/Milk bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
+                      <img src="asset/Booba Menu/Milk bobba.jpg" alt="Sicilian Pizza" class="rounded-t-lg h-[180px] w-full object-cover" />
                       <div class="flex items-center justify-between w-full p-4 wrap">
                         <div class="flex flex-col">
                           <p class="text-xl">Sicilian Pizza</p>
@@ -374,7 +314,7 @@
                 <div class="space-y-6 swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center md:p-0 p-0.5 md:flex-row gap-x-6 md:gap-y-0 gap-y-3">
-                      <img src="../asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
+                      <img src="asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
                       <div class="flex flex-col w-full gap-2 md:gap-3 text-wrap">
                         <p class="text-xl font-semibold md:text-lg line-clamp-1">Capuccino Coffee</p>
                         <p class="text-xl md:text-lg text-highlight-content">Extra</p>
@@ -472,7 +412,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center md:p-0 p-0.5 md:flex-row gap-x-6 md:gap-y-0 gap-y-3">
-                      <img src="../asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
+                      <img src="asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
                       <div class="flex flex-col w-full gap-2 md:gap-3 text-wrap">
                         <p class="text-xl font-semibold md:text-lg line-clamp-1">Capuccino Coffee</p>
                         <p class="text-xl md:text-lg text-highlight-content">Extra</p>
@@ -570,7 +510,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center md:p-0 p-0.5 md:flex-row gap-x-6 md:gap-y-0 gap-y-3">
-                      <img src="../asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
+                      <img src="asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
                       <div class="flex flex-col w-full gap-2 md:gap-3 text-wrap">
                         <p class="text-xl font-semibold md:text-lg line-clamp-1">Capuccino Coffee</p>
                         <p class="text-xl md:text-lg text-highlight-content">Extra</p>
@@ -668,7 +608,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="flex flex-col items-center md:p-0 p-0.5 md:flex-row gap-x-6 md:gap-y-0 gap-y-3">
-                      <img src="../asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
+                      <img src="asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-44 md:w-44 md:h-44" />
                       <div class="flex flex-col w-full gap-2 md:gap-3 text-wrap">
                         <p class="text-xl font-semibold md:text-lg line-clamp-1">Capuccino Coffee</p>
                         <p class="text-xl md:text-lg text-highlight-content">Extra</p>
@@ -846,41 +786,41 @@
         <div class="img-showcase-food">
           <div class="grid grid-cols-6 swiper-wrapper">
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Logo/Pizza Menu/Meat Lovers.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Logo/Pizza Menu/Meat Lovers.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Logo/Pizza Menu/Blackpaper.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Logo/Pizza Menu/Blackpaper.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Coffe menu/Caramel Hazelnut Iced Coffee.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Coffe menu/Caramel Hazelnut Iced Coffee.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Coffe menu/capuccino Coffe.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Coffe menu/capuccino Coffe.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Coffe menu/Dalgona Coffee.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Coffe menu/Dalgona Coffee.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Booba Menu/Milk bobba.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Booba Menu/Milk bobba.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <!-- Left -->
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Logo/Pizza Menu/Chicken.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Logo/Pizza Menu/Chicken.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Coffe menu/Dalgona Coffee.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Coffe menu/Dalgona Coffee.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Logo/Pizza Menu/Peperoni.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Logo/Pizza Menu/Peperoni.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Coffe menu/Caramel Machiato.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Coffe menu/Caramel Machiato.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Booba Menu/Matcha.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Booba Menu/Matcha.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
             <div class="img-wrap swiper-slide">
-              <img src="../asset/Booba Menu/Oreo Bobba.jpg" class="w-full h-[243px] object-cover" alt="" />
+              <img src="asset/Booba Menu/Oreo Bobba.jpg" class="w-full h-[243px] object-cover" alt="" />
             </div>
           </div>
         </div>
@@ -892,8 +832,8 @@
     AOS.init();
   </script> -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="../js/swiper.js"></script>
-  <script src="../js/GSAP.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/GSAP.js"></script>
   <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-  <script src="../js/sidebar.js"></script>
+  <script src="js/sidebar.js"></script>
 </html>
