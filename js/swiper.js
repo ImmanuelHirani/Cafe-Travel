@@ -114,7 +114,7 @@ var swiperPizzaMenu = new Swiper(".pizza-swiper ", {
   breakpoints: {
     360: {
       slidesPerView: 1.05,
-      spaceBetween: 8, // Example, adjust as needed
+      spaceBetween: 6, // Example, adjust as needed
     },
     430: {
       slidesPerView: 1.2,
@@ -154,11 +154,10 @@ var swiperBubbleMenu = new Swiper(".bubble-swiper", {
   observer: true,
   speed: 1000, // Slide transition speed
   updateOnWindowResize: true,
-
   breakpoints: {
     360: {
       slidesPerView: 1.05,
-      spaceBetween: 8, // Example, adjust as needed
+      spaceBetween: 6, // Example, adjust as needed
     },
     430: {
       slidesPerView: 1.2,
@@ -198,11 +197,10 @@ var swipercoffeMenu = new Swiper(".coffee-swiper", {
   observer: true,
   speed: 1000, // Slide transition speed
   updateOnWindowResize: true,
-
   breakpoints: {
     360: {
       slidesPerView: 1.05,
-      spaceBetween: 8, // Example, adjust as needed
+      spaceBetween: 6, // Example, adjust as needed
     },
     430: {
       slidesPerView: 1.2,
@@ -242,15 +240,13 @@ var swiper = new Swiper(".other-item-content", {
   updateOnWindowResize: true,
   slidesPerView: "auto", // Menyesuaikan tampilan item
   spaceBetween: 12, // Kurangi jarak antar slide
-  freeMode: true, // Memungkinkan scroll bebas untuk melihat item terakhir sepenuhnya
 });
 
 var swiper = new Swiper(".cart-added-content", {
   direction: "vertical",
   mousewheel: true,
-  speed: 800, // Slide transition speed
   updateOnWindowResize: true,
+  speed: 800, // Slide transition speed
   slidesPerView: "auto", // Menyesuaikan tampilan item
   spaceBetween: 12, // Kurangi jarak antar slide
-  freeMode: true, // Memungkinkan scroll bebas untuk melihat item terakhir sepenuhnya
 });

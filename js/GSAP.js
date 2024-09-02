@@ -91,7 +91,6 @@ const mm = gsap.matchMedia();
 
 mm.add(
   {
-    isMobile: "(min-width: 360px) and (max-width: 501px)",
     isTablet: "(min-width: 501px) and (max-width: 1023px)",
     isLaptop: "(min-width: 1440px) and (max-width: 1580px)",
     isDesktop: "(min-width: 1440px) and (max-width: 1920px)",
@@ -100,7 +99,7 @@ mm.add(
     const { isDesktop, isLaptop, isTablet } = context.conditions;
 
     // Properly select the element based on the context
-    const selector = isLaptop || isDesktop ? ".toppings-content" : isTablet ? ".toppings-content .right-content" : ".toppings-content .right-content";
+    const selector = isLaptop || isDesktop ? ".toppings-content" : ".toppings-content .right-content";
 
     // Create a timeline
     const tl = gsap.timeline({
