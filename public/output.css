@@ -1117,6 +1117,10 @@ footer {
   grid-column: span 9 / span 9;
 }
 
+.col-span-7 {
+  grid-column: span 7 / span 7;
+}
+
 .row-auto {
   grid-row: auto;
 }
@@ -1127,6 +1131,10 @@ footer {
 
 .row-span-8 {
   grid-row: span 8 / span 8;
+}
+
+.row-span-5 {
+  grid-row: span 5 / span 5;
 }
 
 .row-end-2 {
@@ -1307,6 +1315,14 @@ footer {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-0\.5 {
+  margin-top: 0.125rem;
 }
 
 .box-border {
@@ -1509,10 +1525,6 @@ footer {
   height: 200px;
 }
 
-.h-\[240px\] {
-  height: 240px;
-}
-
 .h-\[243px\] {
   height: 243px;
 }
@@ -1548,6 +1560,10 @@ footer {
 
 .h-screen {
   height: 100vh;
+}
+
+.max-h-0 {
+  max-height: 0px;
 }
 
 .max-h-\[24em\] {
@@ -2025,6 +2041,10 @@ footer {
   list-style-position: outside;
 }
 
+.list-disc {
+  list-style-type: disc;
+}
+
 .appearance-none {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -2436,6 +2456,11 @@ footer {
   gap: 2rem;
 }
 
+.gap-x-12 {
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+
 .gap-x-6 {
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
@@ -2465,6 +2490,18 @@ footer {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.875rem * var(--tw-space-x-reverse));
   margin-left: calc(0.875rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -3366,6 +3403,10 @@ footer {
   padding-bottom: 1.25rem;
 }
 
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -3396,6 +3437,18 @@ footer {
 
 .pt-7 {
   padding-top: 1.75rem;
+}
+
+.pl-1 {
+  padding-left: 0.25rem;
+}
+
+.pl-0 {
+  padding-left: 0px;
+}
+
+.pl-0\.5 {
+  padding-left: 0.125rem;
 }
 
 .text-left {
@@ -4859,6 +4912,10 @@ section {
     position: absolute;
   }
 
+  .lg\:sticky {
+    position: sticky;
+  }
+
   .lg\:-bottom-\[53\%\] {
     bottom: -53%;
   }
@@ -4960,6 +5017,10 @@ section {
 
   .lg\:gap-9 {
     gap: 2.25rem;
+  }
+
+  .lg\:gap-y-0 {
+    row-gap: 0px;
   }
 
   .lg\:rounded-none {
