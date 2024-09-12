@@ -63,6 +63,10 @@
     @apply scroll-smooth;
   }
 
+  .secondary-color-gradient {
+    background: linear-gradient(270deg, #141925 13.36%, #090e1a 86.64%);
+  }
+
   @font-face {
     font-family: "AesthetNova";
     font-weight: 500;
@@ -132,8 +136,27 @@ section {
   @apply lg:py-24 md:py-16 py-12;
 }
 
-.swiper-slide-active figcaption {
+/* Selector untuk figcaption */
+.swiper-slide-active .topping-wrapper figcaption {
   @apply opacity-100 translate-y-0;
+}
+
+/* Selector untuk topping-logo */
+.swiper-slide-active .topping-wrapper .topping-logo {
+  @apply opacity-100 translate-y-0;
+}
+
+.swiper-slide-active .card-wrapper {
+  @apply opacity-100 scale-100;
+}
+
+.swiper-slide-next + .swiper-slide .card-wrapper {
+  @apply opacity-100 scale-100;
+}
+
+/* Mengatur efek pada gambar saat slide aktif */
+.swiper-slide-active .topping-wrapper {
+  @apply opacity-100 scale-100; /* Menggunakan TailwindCSS utility classes */
 }
 
 #swiperBanner .swiper-pagination {

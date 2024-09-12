@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="public/output.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
@@ -169,86 +170,190 @@
       <section class="mt-14 md:mt-20 cart">
         <div class="container">
           <div class="flex flex-col grid-cols-12 gap-4 md:grid">
-            <div class="col-span-6 transition-all duration-300 ease-in-out box-cart font-aesthetnova">
-              <div class="flex flex-col p-2.5 rounded-lg md:p-8 gap-y-8 content-body bg-secondary-accent-color">
-                <div class="box-status-order bg-[#D4EDDA] py-4 rounded-lg px-8">
-                  <p class="text-[#185C26] md:text-lg text-sm font-semibold text-center">Order successfully created , please continue payment for your order</p>
-                </div>
-                <!-- Repeted Content -->
-                <div class="flex flex-col items-center justify-between md:p-0 p-0.5 md:flex-row md:gap-y-0 gap-y-3">
-                  <img src="asset/Coffe menu/capuccino Coffe.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-52 3xl:w-96 3xl:h-60 md:w-64 md:h-44" />
-                  <div class="flex flex-col w-full gap-2 md:w-fit text-wrap">
-                    <p class="text-xl font-semibold md:text-lg line-clamp-1">Capuccino Coffee</p>
-                    <p class="text-xl md:text-lg text-highlight-content">Extra</p>
-                    <div class="flex wrap">
-                      <p class="text-xl md:text-lg">Rp 1.500.000</p>
-                    </div>
-                  </div>
-                  <div class="w-full px-4 py-2 rounded-full md:w-fit quantity-area bg-secondary-color">
-                    <p class="text-xl text-center md:text-base ms-auto">Qty : X 1</p>
-                  </div>
-                </div>
-                <div class="flex flex-col items-center justify-between md:p-0 p-0.5 md:flex-row md:gap-y-0 gap-y-3">
-                  <img src="asset/Booba Menu/Choco bobba.jpg" alt="Sicilian Pizza" class="object-cover w-full rounded h-52 3xl:w-96 3xl:h-60 md:w-64 md:h-44" />
-                  <div class="flex flex-col w-full gap-2 md:w-fit text-wrap">
-                    <p class="text-xl font-semibold md:text-lg line-clamp-1">Capuccino Coffee</p>
-                    <p class="text-xl md:text-lg text-highlight-content">Extra</p>
-                    <div class="flex wrap">
-                      <p class="text-xl md:text-lg">Rp 1.500.000</p>
-                    </div>
-                  </div>
-                  <div class="w-full px-4 py-2 rounded-full md:w-fit quantity-area bg-secondary-color">
-                    <p class="text-xl text-center md:text-base ms-auto">Qty : X 1</p>
-                  </div>
-                </div>
-                <!-- Repeted Content end -->
-                <hr class="border-[1px] border-gray-500" />
-                <div class="flex flex-col gap-3 wrap">
-                  <span class="flex items-center justify-between"
-                    ><p class="text-lg">Subtotal</p>
-                    <p class="text-lg">Rp 1.500.000</p>
+            <div class="flex flex-col col-span-6 gap-4 text-base transition-all duration-300 ease-in-out box-cart font-aesthetnova lg:text-xl">
+              <div class="flex flex-col p-4 rounded-lg md:p-8 gap-y-6 content-body bg-secondary-accent-color outline outline-1 outline-highlight-content">
+                <div id="order_notice" class="flex flex-col gap-3">
+                  <span class="flex items-center justify-between">
+                    <p>Order Detail</p>
+                    <p class="py-1.5 px-4 font-semibold rounded-full lg:text-lg text-sm bg-highlight-content text-secondary-accent-color">On Process</p>
                   </span>
                   <span class="flex items-center justify-between">
-                    <p class="flex items-center gap-3 text-lg text-highlight-content">
-                      Shipping
-                      <img src="asset/QuestionMark-Shipping.png" class="w-[10%]" alt="" />
-                    </p>
-                    <p class="text-lg text-highlight-content">Rp. 20.000</p>
+                    <p>Invoice No.</p>
+                    <p>INVCT/2024/01/04/1234567</p>
                   </span>
-                  <span class="flex items-center justify-between"
-                    ><p class="text-lg">Total Payment</p>
-                    <p class="text-lg">Rp 1.520.000</p>
+                  <span class="flex items-center justify-between">
+                    <p>Order Date</p>
+                    <p>2 Agustus 2024, 14:00</p>
                   </span>
                 </div>
-                <button class="self-end w-full gap-3 py-3 text-base transition-all duration-300 ease-in-out rounded-lg bg-secondary-color">Cancle Order</button>
+                <hr />
+                <div id="location" class="flex flex-col">
+                  <p class="text-highlight-content">Delivery Information</p>
+                  <p>Immanuel Christian Hirani | (0813-1480-1945) Kampus Kijang Jl. Kemanggisan Ilir III No. 45, Kemanggisan / Palmerah Jakarta Barat 11480, Indonesia</p>
+                </div>
+                <hr />
+                <div class="space-y-4 Payment_informations">
+                  <p class="text-highlight-content">Payment Information</p>
+                  <span class="flex items-center justify-between">
+                    <p>Payment Method</p>
+                    <p>Mid Trans</p>
+                  </span>
+                  <span class="flex items-center justify-between">
+                    <p>Total (2 Items)</p>
+                    <p>Rp250.000</p>
+                  </span>
+                  <span class="flex items-center justify-between">
+                    <p>Delivery Fee</p>
+                    <p>Rp20.000</p>
+                  </span>
+                  <span class="flex items-center justify-between">
+                    <p>Service Fee</p>
+                    <p>Rp3.000</p>
+                  </span>
+                </div>
+                <hr class="border-[1px] border-gray-500" />
+                <div class="flex justify-between gap-3 wrap">
+                  <p class="text-highlight-content">Total</p>
+                  <p>Rp 1.520.000</p>
+                </div>
+              </div>
+              <div class="flex flex-col p-4 rounded-lg md:p-8 lg:gap-y-6 gap-y-5 content-body bg-secondary-accent-color outline outline-1 outline-highlight-content">
+                <p class="text-2xl text-highlight-content lg:text-3xl">Order Summary</p>
+                <div x-data="{ cardItemOrder: 3 }" :class="cardItemOrder === 1 ? 'h-fit' : 'lg:h-[20rem] h-[24rem] overflow-y-auto'" class="flex flex-col gap-6 wrap">
+                  <!-- Repeated Content -->
+                  <template x-for="item in cardItemOrder" :key="item">
+                    <div class="flex flex-col items-center p-0 gap-x-8 gap-y-3 md:flex-row md:gap-y-0">
+                      <img src="asset/Coffe menu/capuccino Coffe.jpg" alt="Capuccino Coffee" class="object-cover w-full rounded-lg h-52 3xl:w-80 3xl:h-60 md:w-64 md:h-44" />
+                      <div class="flex flex-col w-full gap-1.5 text-wrap md:w-fit">
+                        <p class="font-semibold line-clamp-1">Capuccino Coffee</p>
+                        <p class="text-highlight-content">Extra</p>
+                        <div class="flex">
+                          <p>Rp 1.500.000</p>
+                        </div>
+                      </div>
+                      <div class="w-full px-4 py-2 rounded-full md:w-fit quantity-area bg-secondary-color">
+                        <p class="text-center md:text-base ms-auto">Qty : X 1</p>
+                      </div>
+                    </div>
+                  </template>
+                  <!-- Repeated Content End -->
+                </div>
               </div>
             </div>
             <div class="col-span-6 row-auto gap-4 text-base md:text-lg">
-              <div class="sticky flex flex-col w-full gap-4 rounded-lg h-fit top-36 box-Location font-aesthetnova bg-secondary-accent-color">
-                <div class="px-4 py-4 rounded-t-lg bg-secondary-color header body md:px-8">
-                  <p class="uppercase">Payment Method</p>
-                </div>
-                <div class="px-4 py-4 body md:px-8">
-                  <div class="user-quick-details flex items-center justify-between gap-0.5">
-                    <img src="asset/Payment/Midtrans.png" class="md:w-[25%] w-[40%]" alt="" />
-                    <input
-                      type="checkbox"
-                      class="w-5 h-5 transition-all duration-300 ease-in-out bg-transparent border-2 rounded-full appearance-none cursor-pointer border-highlight-content checked:bg-highlight-content checked:border-highlight-content hover:border-none hover:bg-highlight-content"
-                    />
+              <div class="sticky flex flex-col w-full gap-4 rounded-lg h-fit top-36 box-Location font-aesthetnova bg-secondary-accent-color outline outline-1 outline-highlight-content">
+                <div class="px-4 py-4 md:py-8 body md:px-8">
+                  <div class="space-y-2 wrap">
+                    <p class="text-2xl text-highlight-content">Processing Order</p>
+                    <p class="text-lg">Estimated in the kitchen 14.10</p>
                   </div>
-                </div>
-                <div class="flex flex-col items-center justify-between gap-4 px-4 py-4 md:gap-0 md:flex-row md:px-8 footer">
-                  <p class="text-sm text-highlight-content">Order That Been Pay Cannot Be Cancle *</p>
-                  <a href="Tracking-order.html" class="self-end w-full gap-3 px-2 py-2.5 text-base text-center transition-all duration-300 ease-in-out rounded-lg md:w-fit 2xl:px-12 bg-secondary-color"
-                    >Pay Now</a
-                  >
+                  <div class="flex items-center justify-between gap-2.5 mt-6 lg:gap-4 progress-bar">
+                    <img src="asset/CafeTravel.png" class="rounded-full w-7 lg:w-9" alt="" />
+                    <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
+                      <div class="bg-highlight-content h-1.5 rounded-full"></div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-32" viewBox="0 0 23 21" fill="none">
+                      <path
+                        d="M22.1196 6.65569L20.8672 1.63991C20.7136 1.02367 20.1601 0.591614 19.525 0.591614H2.61671C1.98156 0.591614 1.42805 1.02367 1.27307 1.63991L0.0207565 6.65569C0.00691885 6.7097 0 6.76647 0 6.82325C0 8.73152 1.47371 10.2853 3.28645 10.2853C4.3395 10.2853 5.27908 9.76043 5.88102 8.94616C6.48296 9.76043 7.42254 10.2853 8.47559 10.2853C9.52864 10.2853 10.4682 9.76043 11.0702 8.94616C11.6721 9.76043 12.6103 10.2853 13.6647 10.2853C14.7192 10.2853 15.6574 9.76043 16.2593 8.94616C16.8612 9.76043 17.7994 10.2853 18.8539 10.2853C20.6666 10.2853 22.1403 8.73152 22.1403 6.82325C22.1403 6.76647 22.1334 6.7097 22.1196 6.65569Z"
+                        fill="#F8C055"
+                      />
+                      <path
+                        d="M18.8539 12.0995C17.9115 12.0995 17.0162 11.8115 16.2593 11.2853C14.7455 12.3391 12.584 12.3391 11.0702 11.2853C9.55633 12.3391 7.39489 12.3391 5.88104 11.2853C5.12412 11.8115 4.22882 12.0995 3.28647 12.0995C2.60704 12.0995 1.96636 11.9403 1.38379 11.6689V19.0236C1.38379 19.788 2.00372 20.4084 2.76756 20.4084H8.30264V14.8692H13.8377V20.4084H19.3728C20.1366 20.4084 20.7566 19.788 20.7566 19.0236V11.6689C20.174 11.9403 19.5333 12.0995 18.8539 12.0995Z"
+                        fill="#F8C055"
+                      />
+                    </svg>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
+                      <div class="bg-highlight-content h-1.5 rounded-full"></div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-32" viewBox="0 0 23 23" fill="none">
+                      <g clip-path="url(#clip0_1562_735)">
+                        <path
+                          d="M4.42661 20.9249C6.18234 20.9024 7.58825 19.3965 7.5668 17.5612C7.54535 15.7259 6.10467 14.2563 4.34894 14.2787C2.59322 14.3012 1.18731 15.8071 1.20876 17.6424C1.23021 19.4777 2.67089 20.9473 4.42661 20.9249Z"
+                          fill="#F8C055"
+                        />
+                        <path
+                          d="M18.9344 20.9256C20.6902 20.9032 22.0961 19.3972 22.0746 17.5619C22.0532 15.7266 20.6125 14.257 18.8568 14.2795C17.101 14.3019 15.6951 15.8079 15.7166 17.6431C15.738 19.4784 17.1787 20.948 18.9344 20.9256Z"
+                          fill="#F8C055"
+                        />
+                        <path
+                          d="M12.4849 4.74601C12.6732 4.94142 12.9272 5.05203 13.1926 5.05417L14.9169 11.5449C15.228 12.7151 14.9496 13.9815 14.1508 14.8638C14.1508 14.8638 13.1247 16.0196 11.5886 16.0214C11.1039 16.0178 10.6403 15.814 10.2989 15.4544C9.9575 15.0948 9.76602 14.6086 9.76626 14.1019C9.76616 13.4006 9.84111 12.7014 9.9897 12.0175C10.1813 11.2327 10.3064 10.9767 10.5363 10.4843C11.2865 10.377 11.5761 9.22292 11.0214 8.28316C10.4396 7.29488 9.16427 7.18167 7.62685 7.74409C6.08942 8.30652 4.65298 8.00329 2.66782 7.64841C0.671924 7.29173 0.359541 10.4933 1.80114 10.4933H2.67255C1.64228 11.1347 0.805319 12.066 0.257275 13.181C0.194521 13.3073 0.15619 13.4453 0.144471 13.587C0.132752 13.7288 0.147876 13.8716 0.188979 14.0073C0.230081 14.143 0.296356 14.2688 0.384015 14.3777C0.471674 14.4866 0.578998 14.5764 0.699853 14.6418C0.815206 14.7025 0.945752 14.724 1.07335 14.7035C1.20095 14.6829 1.31926 14.6214 1.41185 14.5273C1.89131 14.0177 2.48378 13.6397 3.13661 13.4272C3.54349 13.2999 3.96534 13.2325 4.39001 13.2268C5.49944 13.2281 6.56308 13.6895 7.34752 14.5097C8.13197 15.3299 8.57317 16.4419 8.57431 17.6017C8.57431 17.6916 8.57173 17.7822 8.56657 17.8735C8.56469 17.9042 8.56885 17.935 8.5788 17.9639C8.58875 17.9928 8.60428 18.0193 8.62442 18.0417C8.64456 18.0641 8.66889 18.082 8.69589 18.0941C8.7229 18.1063 8.75201 18.1126 8.78142 18.1125H13.6369C13.9127 18.1044 14.1766 17.9927 14.3802 17.798C14.5838 17.6033 14.7136 17.3384 14.7459 17.0519C14.8468 16.2212 15.1735 15.4381 15.6873 14.7957C16.2011 14.1533 16.8804 13.6785 17.6446 13.4276C18.0515 13.3003 18.4733 13.2329 18.898 13.2273C19.8644 13.2264 20.8011 13.5769 21.5474 14.2187C21.8517 14.4797 22.2835 14.1127 22.0966 13.7506L22.0914 13.7412C21.4706 12.5901 20.5278 11.6652 19.3895 11.0908C19.2267 11.0081 19.0617 10.934 18.8958 10.8662C18.84 7.86179 15.5043 5.05552 15.5043 5.05552C16.4002 5.11032 16.4316 4.17775 16.4316 4.17775C16.4866 3.04706 15.7544 2.14099 14.7442 2.079C14.4897 2.0652 14.2375 2.13443 14.0223 2.2771L13.4379 2.66073C13.2423 2.79248 13.0358 2.90568 12.8209 2.999C12.673 3.06154 12.5412 3.15947 12.4361 3.28492C12.3309 3.41037 12.2554 3.55984 12.2155 3.72134C12.2155 3.72134 11.9461 3.80489 11.8472 3.90103C11.7773 3.96347 11.7262 4.04572 11.7 4.13786C11.6738 4.22999 11.6737 4.32808 11.6996 4.4203C11.7256 4.51252 11.7765 4.59492 11.8462 4.65757C11.9159 4.72023 12.0015 4.76046 12.0926 4.77341C12.0926 4.77341 12.2301 4.79767 12.4849 4.74601Z"
+                          fill="#F8C055"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1562_735">
+                          <rect width="22" height="23" fill="white" transform="translate(0.140625)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
+                      <div class="bg-highlight-content h-1.5 rounded-full w-0"></div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-32" viewBox="0 0 23 23" fill="none">
+                      <g clip-path="url(#clip0_1562_742)">
+                        <path
+                          d="M21.5475 10.0039C21.547 10.0034 21.5465 10.0028 21.546 10.0023L12.5717 0.620483C12.1892 0.220398 11.6806 0 11.1396 0C10.5987 0 10.0901 0.220222 9.7074 0.620308L0.737846 9.9974C0.734825 10.0006 0.731804 10.0039 0.728782 10.007C-0.0567401 10.833 -0.0553973 12.1731 0.732643 12.997C1.09267 13.3736 1.56818 13.5917 2.07659 13.6145C2.09724 13.6166 2.11805 13.6176 2.13903 13.6176H2.49671V20.5221C2.49671 21.8884 3.56002 23 4.86721 23H8.37823C8.73406 23 9.02276 22.6984 9.02276 22.3262V16.9131C9.02276 16.2896 9.50783 15.7825 10.1042 15.7825H12.1751C12.7714 15.7825 13.2565 16.2896 13.2565 16.9131V22.3262C13.2565 22.6984 13.545 23 13.9011 23H17.4121C18.7193 23 19.7826 21.8884 19.7826 20.5221V13.6176H20.1142C20.655 13.6176 21.1636 13.3974 21.5465 12.9973C22.3353 12.1721 22.3357 10.8297 21.5475 10.0039Z"
+                          fill="#D0D0D0"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1562_742">
+                          <rect width="22" height="23" fill="white" transform="translate(0.140625)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <!-- Clean Code -->
+                  <div class="relative flex flex-col justify-center gap-6 mt-12 wrap-location-order">
+                    <div class="space-y-1.5 wrap">
+                      <!-- Cafe Travel Location -->
+                      <div class="flex items-center gap-6 cafe">
+                        <img src="asset/CafeTravel.png" class="w-12 rounded-full" alt="Cafe Travel" />
+                        <div class="desc">
+                          <p class="text-base lg:text-lg">Cafe Travel - Perumnas 1</p>
+                          <p class="text-sm text-gray-400 lg:text-base">Jl. Kakap Raya no 155, Karawaci, Karawaci Baru</p>
+                        </div>
+                      </div>
+                      <!-- Divider Line -->
+                      <img src="asset/line-location-order.png" class="w-0.5 ml-6" alt="Divider Line" />
+                      <!-- University Location -->
+                      <div class="flex items-center gap-6 cafe">
+                        <img src="asset/Pin-Location.png" class="w-12 rounded-full" alt="Location Pin" />
+                        <div class="desc">
+                          <p class="text-base lg:text-lg">Universitas Pelita Harapan</p>
+                          <p class="text-sm text-gray-400 lg:text-base">Jalan Benton Junction Deket Lippo</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Distance Indicator -->
+                    <p class="top-0 right-0 text-base lg:absolute lg:text-sm text-highlight-content">0.16km</p>
+                    <!-- Input Field -->
+                    <div class="w-full wrap">
+                      <input type="text" class="w-full px-4 py-3 text-base rounded-lg outline-none" placeholder="Titip Di lobby" />
+                    </div>
+                  </div>
+                  <div class="mt-8 driver-location">
+                    <div class="flex items-center gap-6 cafe">
+                      <!-- Driver Info -->
+                      <img src="asset/driver.png" class="w-12 rounded-full" alt="Driver" />
+                      <div class="desc">
+                        <p class="text-lg">Irfan Dwi Yulianto</p>
+                        <span class="flex items-center gap-3">
+                          <p class="text-highlight-content">B 5671 TOH</p>
+                          <p class="text-base text-highlight-content">5.0</p>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- Location Image -->
+                    <img src="asset/Location.png" class="w-full mt-8" alt="Location" />
+                  </div>
+                  <!-- Clean Code End -->
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- SideBar  -->
       <div id="sidebarCart" class="fixed inset-0 z-50 flex items-center justify-end transition-all duration-[400ms] ease-linear translate-x-full font-aesthetnova">
         <div class="flex w-full h-full max-w-3xl">
           <!-- Others Also Bought Section -->
@@ -781,102 +886,6 @@
               </a>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- Login & register Box -->
-      <div id="LoginRegisterBox" class="fixed inset-0 z-50 flex items-center justify-center invisible bg-black opacity-0 bg-opacity-70 add-to-cart-quick-list font-aesthetnova">
-        <div
-          id="LoginBox"
-          class="relative flex flex-col md:flex-row w-[90%] justify-center overflow-hidden md:w-[45%] h-[400px] md:h-[550px] p-4 md:p-8 gap-6 md:gap-9 rounded-lg bg-secondary-accent-color box-cart"
-        >
-          <h5 class="absolute mt-3 text-gray-300 translate-x-1/2 lg:top-8 top-5 right-1/2">Login</h5>
-          <form action="" class="flex flex-col justify-center lg:w-[90%] w-full col-span-3 gap-4">
-            <div class="relative">
-              <input required type="text" class="w-full h-12 border-b-[1px] border-white bg-transparent outline-none" placeholder="Username / Email" />
-              <svg class="absolute right-0 w-6 h-6 bottom-2" fill="white" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                <g data-name="8-Email" id="_8-Email">
-                  <path
-                    d="M45,7H3a3,3,0,0,0-3,3V38a3,3,0,0,0,3,3H45a3,3,0,0,0,3-3V10A3,3,0,0,0,45,7Zm-.64,2L24,24.74,3.64,9ZM2,37.59V10.26L17.41,22.17ZM3.41,39,19,23.41l4.38,3.39a1,1,0,0,0,1.22,0L29,23.41,44.59,39ZM46,37.59,30.59,22.17,46,10.26Z"
-                  />
-                </g>
-              </svg>
-            </div>
-            <div class="relative">
-              <input required type="text" class="w-full h-12 border-b-[1px] border-white bg-transparent outline-none" placeholder="Password" />
-              <svg class="absolute right-0 w-6 h-6 bottom-2" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12,4 C14.7275481,4 17.3356792,5.4306247 19.76629,7.78114976 C20.5955095,8.58304746 21.3456935,9.43915664 22.0060909,10.2956239 C22.4045936,10.8124408 22.687526,11.2189945 22.8424353,11.4612025 L23.1870348,12 L22.8424353,12.5387975 C22.687526,12.7810055 22.4045936,13.1875592 22.0060909,13.7043761 C21.3456935,14.5608434 20.5955095,15.4169525 19.76629,16.2188502 C17.3356792,18.5693753 14.7275481,20 12,20 C9.27245185,20 6.66432084,18.5693753 4.23371003,16.2188502 C3.40449054,15.4169525 2.65430652,14.5608434 1.99390911,13.7043761 C1.59540638,13.1875592 1.31247398,12.7810055 1.15756471,12.5387975 L0.812965202,12 L1.15756471,11.4612025 C1.31247398,11.2189945 1.59540638,10.8124408 1.99390911,10.2956239 C2.65430652,9.43915664 3.40449054,8.58304746 4.23371003,7.78114976 C6.66432084,5.4306247 9.27245185,4 12,4 Z M20.4222529,11.5168761 C19.8176112,10.7327184 19.1301624,9.94820254 18.37596,9.21885024 C16.2825083,7.1943753 14.1050769,6 12,6 C9.89492315,6 7.71749166,7.1943753 5.62403997,9.21885024 C4.86983759,9.94820254 4.18238879,10.7327184 3.57774714,11.5168761 C3.44715924,11.6862352 3.32648802,11.8478224 3.21616526,12 C3.32648802,12.1521776 3.44715924,12.3137648 3.57774714,12.4831239 C4.18238879,13.2672816 4.86983759,14.0517975 5.62403997,14.7811498 C7.71749166,16.8056247 9.89492315,18 12,18 C14.1050769,18 16.2825083,16.8056247 18.37596,14.7811498 C19.1301624,14.0517975 19.8176112,13.2672816 20.4222529,12.4831239 C20.5528408,12.3137648 20.673512,12.1521776 20.7838347,12 C20.673512,11.8478224 20.5528408,11.6862352 20.4222529,11.5168761 Z M12,16 C9.790861,16 8,14.209139 8,12 C8,9.790861 9.790861,8 12,8 C14.209139,8 16,9.790861 16,12 C16,14.209139 14.209139,16 12,16 Z M12,14 C13.1045695,14 14,13.1045695 14,12 C14,10.8954305 13.1045695,10 12,10 C10.8954305,10 10,10.8954305 10,12 C10,13.1045695 10.8954305,14 12,14 Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <button type="submit" class="w-full py-3 mt-3 rounded-lg bg-secondary-color">Login</button>
-            <p class="text-center">Don't Have Account ? <span id="RegisterBoxOpen" class="text-red-500 cursor-pointer">Sign Up</span></p>
-          </form>
-          <img src="asset/Bobba-login.png" class="absolute w-[10%] bottom-0 right-0" alt="" />
-          <img src="asset/Coffe-Login.png" class="absolute w-[8%] top-0 left-0" alt="" />
-          <img src="asset/Pizza-Hero.png" class="absolute translate-x-1/2 right-1/2 xl:w-fit w-[70%] lg:-bottom-[53%] -bottom-[60%]" alt="" />
-          <!-- Close Button -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="absolute cursor-pointer closeloginBox lg:top-6 top-3 lg:right-6 right-3" width="20" height="20" viewBox="0 0 12 12" fill="none">
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M0.29289 0.29289C0.68342 -0.09763 1.31658 -0.09763 1.70711 0.29289L6 4.58579L10.2929 0.29289C10.6834 -0.09763 11.3166 -0.09763 11.7071 0.29289C12.0976 0.68342 12.0976 1.31658 11.7071 1.70711L7.4142 6L11.7071 10.2929C12.0976 10.6834 12.0976 11.3166 11.7071 11.7071C11.3166 12.0976 10.6834 12.0976 10.2929 11.7071L6 7.4142L1.70711 11.7071C1.31658 12.0976 0.68342 12.0976 0.29289 11.7071C-0.09763 11.3166 -0.09763 10.6834 0.29289 10.2929L4.58579 6L0.29289 1.70711C-0.09763 1.31658 -0.09763 0.68342 0.29289 0.29289Z"
-              fill="white"
-            />
-          </svg>
-        </div>
-        <div
-          id="RegisterBox"
-          class="flex flex-col absolute opacity-0 bottom-1/2 invisible translate-y-1/2 md:flex-row w-[90%] justify-center overflow-hidden md:w-[45%] h-[400px] md:h-[550px] p-4 md:p-8 gap-6 md:gap-9 rounded-lg bg-secondary-accent-color box-cart"
-        >
-          <h5 class="absolute mt-3 text-gray-300 translate-x-1/2 lg:top-8 top-3 right-1/2">Register</h5>
-          <form action="" class="flex flex-col justify-center lg:w-[90%] w-full col-span-3 gap-4">
-            <div class="relative">
-              <input required type="text" class="w-full h-12 border-b-[1px] border-white bg-transparent outline-none" placeholder="Email" />
-              <svg class="absolute right-0 w-6 h-6 bottom-2" fill="white" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                <g data-name="8-Email" id="_8-Email">
-                  <path
-                    d="M45,7H3a3,3,0,0,0-3,3V38a3,3,0,0,0,3,3H45a3,3,0,0,0,3-3V10A3,3,0,0,0,45,7Zm-.64,2L24,24.74,3.64,9ZM2,37.59V10.26L17.41,22.17ZM3.41,39,19,23.41l4.38,3.39a1,1,0,0,0,1.22,0L29,23.41,44.59,39ZM46,37.59,30.59,22.17,46,10.26Z"
-                  />
-                </g>
-              </svg>
-            </div>
-            <div class="relative">
-              <input required type="text" class="w-full h-12 border-b-[1px] border-white bg-transparent outline-none" placeholder="Phone Number" />
-              <svg class="absolute right-0 w-6 h-6 bottom-2" fill="white" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M18.1182 14.702L14 15.5C11.2183 14.1038 9.5 12.5 8.5 10L9.26995 5.8699L7.81452 2L4.0636 2C2.93605 2 2.04814 2.93178 2.21654 4.04668C2.63695 6.83 3.87653 11.8765 7.5 15.5C11.3052 19.3052 16.7857 20.9564 19.802 21.6127C20.9668 21.8662 22 20.9575 22 19.7655L22 16.1812L18.1182 14.702Z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-            <div class="relative">
-              <input required type="text" class="w-full h-12 border-b-[1px] border-white bg-transparent outline-none" placeholder="Password" />
-              <svg class="absolute right-0 w-6 h-6 bottom-2" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12,4 C14.7275481,4 17.3356792,5.4306247 19.76629,7.78114976 C20.5955095,8.58304746 21.3456935,9.43915664 22.0060909,10.2956239 C22.4045936,10.8124408 22.687526,11.2189945 22.8424353,11.4612025 L23.1870348,12 L22.8424353,12.5387975 C22.687526,12.7810055 22.4045936,13.1875592 22.0060909,13.7043761 C21.3456935,14.5608434 20.5955095,15.4169525 19.76629,16.2188502 C17.3356792,18.5693753 14.7275481,20 12,20 C9.27245185,20 6.66432084,18.5693753 4.23371003,16.2188502 C3.40449054,15.4169525 2.65430652,14.5608434 1.99390911,13.7043761 C1.59540638,13.1875592 1.31247398,12.7810055 1.15756471,12.5387975 L0.812965202,12 L1.15756471,11.4612025 C1.31247398,11.2189945 1.59540638,10.8124408 1.99390911,10.2956239 C2.65430652,9.43915664 3.40449054,8.58304746 4.23371003,7.78114976 C6.66432084,5.4306247 9.27245185,4 12,4 Z M20.4222529,11.5168761 C19.8176112,10.7327184 19.1301624,9.94820254 18.37596,9.21885024 C16.2825083,7.1943753 14.1050769,6 12,6 C9.89492315,6 7.71749166,7.1943753 5.62403997,9.21885024 C4.86983759,9.94820254 4.18238879,10.7327184 3.57774714,11.5168761 C3.44715924,11.6862352 3.32648802,11.8478224 3.21616526,12 C3.32648802,12.1521776 3.44715924,12.3137648 3.57774714,12.4831239 C4.18238879,13.2672816 4.86983759,14.0517975 5.62403997,14.7811498 C7.71749166,16.8056247 9.89492315,18 12,18 C14.1050769,18 16.2825083,16.8056247 18.37596,14.7811498 C19.1301624,14.0517975 19.8176112,13.2672816 20.4222529,12.4831239 C20.5528408,12.3137648 20.673512,12.1521776 20.7838347,12 C20.673512,11.8478224 20.5528408,11.6862352 20.4222529,11.5168761 Z M12,16 C9.790861,16 8,14.209139 8,12 C8,9.790861 9.790861,8 12,8 C14.209139,8 16,9.790861 16,12 C16,14.209139 14.209139,16 12,16 Z M12,14 C13.1045695,14 14,13.1045695 14,12 C14,10.8954305 13.1045695,10 12,10 C10.8954305,10 10,10.8954305 10,12 C10,13.1045695 10.8954305,14 12,14 Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <button type="submit" class="w-full py-3 mt-3 rounded-lg bg-secondary-color">Register</button>
-            <p class="text-center">Already Have Account? <span id="LoginBoxOpen" class="text-red-500 cursor-pointer">Sign In</span></p>
-          </form>
-          <img src="asset/Bobba-login.png" class="absolute w-[10%] bottom-0 right-0" alt="" />
-          <img src="asset/Coffe-Login.png" class="absolute w-[8%] top-0 left-0" alt="" />
-          <img src="asset/Pizza-Hero.png" class="absolute translate-x-1/2 right-1/2 xl:w-fit w-[70%] lg:-bottom-[53%] -bottom-[60%]" alt="" />
-          <!-- Close Button -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="absolute cursor-pointer closeloginBox lg:top-6 top-3 lg:right-6 right-3" width="20" height="20" viewBox="0 0 12 12" fill="none">
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M0.29289 0.29289C0.68342 -0.09763 1.31658 -0.09763 1.70711 0.29289L6 4.58579L10.2929 0.29289C10.6834 -0.09763 11.3166 -0.09763 11.7071 0.29289C12.0976 0.68342 12.0976 1.31658 11.7071 1.70711L7.4142 6L11.7071 10.2929C12.0976 10.6834 12.0976 11.3166 11.7071 11.7071C11.3166 12.0976 10.6834 12.0976 10.2929 11.7071L6 7.4142L1.70711 11.7071C1.31658 12.0976 0.68342 12.0976 0.29289 11.7071C-0.09763 11.3166 -0.09763 10.6834 0.29289 10.2929L4.58579 6L0.29289 1.70711C-0.09763 1.31658 -0.09763 0.68342 0.29289 0.29289Z"
-              fill="white"
-            />
-          </svg>
         </div>
       </div>
     </main>

@@ -24,12 +24,14 @@ var swiper = new Swiper(".customTopping", {
 
   breakpoints: {
     360: {
-      slidesPerView: 1.2,
-      spaceBetween: 16,
+      slidesPerView: 1.19,
+
       centeredSlides: true,
     },
     430: {
-      slidesPerView: 1.2,
+      slidesPerView: 1.19,
+
+      centeredSlides: true,
     },
     540: {
       slidesPerView: 1.5,
@@ -47,8 +49,8 @@ var swiper = new Swiper(".customTopping", {
       spaceBetween: 16,
     },
     1380: {
-      slidesPerView: 3.1,
-      spaceBetween: 16,
+      slidesPerView: 2.5,
+      spaceBetween: 0,
       centeredSlides: true,
     },
   },
@@ -103,135 +105,59 @@ var swiperFooterImgSlide = new Swiper(".img-showcase-food", {
   },
 });
 
-var swiperPizzaMenu = new Swiper(".pizza-swiper ", {
-  grabCursor: true,
-  loop: true,
-  preventClicksPropagation: true,
-  observer: true,
-  speed: 1000, // Slide transition speed
-  updateOnWindowResize: true,
+function initSwiper(selector) {
+  return new Swiper(selector, {
+    grabCursor: true,
+    preventClicksPropagation: true,
+    observer: true,
 
-  breakpoints: {
-    360: {
-      slidesPerView: 1.05,
-      spaceBetween: 6, // Example, adjust as needed
-    },
-    430: {
-      slidesPerView: 1.2,
-      spaceBetween: 8,
-    },
-    540: {
-      slidesPerView: 1.5,
-      spaceBetween: 12, // Example, adjust as needed
-    },
-    768: {
-      slidesPerView: 2.2,
-      spaceBetween: 12,
-    },
-    912: {
-      slidesPerView: 1.8,
-      spaceBetween: 16, // Example, adjust as needed
-    },
-    1024: {
-      slidesPerView: 2.5,
-      spaceBetween: 16,
-    },
-    1380: {
-      slidesPerView: 2.9,
-      spaceBetween: 16,
-    },
-    1800: {
-      slidesPerView: 3.5,
-      spaceBetween: 16,
-    },
-  },
-});
+    // mousewheel: true,
+    speed: 1000, // Slide transition speed
+    updateOnWindowResize: true,
+    // freeMode: false, // Disable free scrolling
+    slideToClickedSlide: true, // Ensure it snaps to the closest slide
 
-var swiperBubbleMenu = new Swiper(".bubble-swiper", {
-  grabCursor: true,
-  loop: true,
-  preventClicksPropagation: true,
-  observer: true,
-  speed: 1000, // Slide transition speed
-  updateOnWindowResize: true,
-  breakpoints: {
-    360: {
-      slidesPerView: 1.05,
-      spaceBetween: 6, // Example, adjust as needed
+    breakpoints: {
+      360: {
+        slidesPerView: 1.06,
+        spaceBetween: 6,
+      },
+      430: {
+        slidesPerView: 1.2,
+        spaceBetween: 8,
+      },
+      540: {
+        slidesPerView: 1.5,
+        spaceBetween: 12,
+      },
+      768: {
+        slidesPerView: 2.2,
+        spaceBetween: 12,
+      },
+      912: {
+        slidesPerView: 1.8,
+        spaceBetween: 16,
+      },
+      1024: {
+        slidesPerView: 2.5,
+        spaceBetween: 16,
+      },
+      1380: {
+        slidesPerView: 2.9,
+        spaceBetween: 16,
+      },
+      1800: {
+        slidesPerView: 3.5,
+        spaceBetween: 16,
+      },
     },
-    430: {
-      slidesPerView: 1.2,
-      spaceBetween: 8,
-    },
-    540: {
-      slidesPerView: 1.5,
-      spaceBetween: 12, // Example, adjust as needed
-    },
-    768: {
-      slidesPerView: 2.2,
-      spaceBetween: 12,
-    },
-    912: {
-      slidesPerView: 1.8,
-      spaceBetween: 16, // Example, adjust as needed
-    },
-    1024: {
-      slidesPerView: 2.5,
-      spaceBetween: 16,
-    },
-    1380: {
-      slidesPerView: 2.9,
-      spaceBetween: 16,
-    },
-    1800: {
-      slidesPerView: 3.5,
-      spaceBetween: 16,
-    },
-  },
-});
+  });
+}
 
-var swipercoffeMenu = new Swiper(".coffee-swiper", {
-  grabCursor: true,
-  loop: true,
-  preventClicksPropagation: true,
-  observer: true,
-  speed: 1000, // Slide transition speed
-  updateOnWindowResize: true,
-  breakpoints: {
-    360: {
-      slidesPerView: 1.05,
-      spaceBetween: 6, // Example, adjust as needed
-    },
-    430: {
-      slidesPerView: 1.2,
-      spaceBetween: 8,
-    },
-    540: {
-      slidesPerView: 1.5,
-      spaceBetween: 12, // Example, adjust as needed
-    },
-    768: {
-      slidesPerView: 2.2,
-      spaceBetween: 12,
-    },
-    912: {
-      slidesPerView: 1.8,
-      spaceBetween: 16, // Example, adjust as needed
-    },
-    1024: {
-      slidesPerView: 2.5,
-      spaceBetween: 16,
-    },
-    1380: {
-      slidesPerView: 2.9,
-      spaceBetween: 16,
-    },
-    1800: {
-      slidesPerView: 3.5,
-      spaceBetween: 16,
-    },
-  },
-});
+// Inisialisasi Swiper untuk masing-masing class
+var swiperPizzaMenu = initSwiper(".pizza-swiper");
+var swiperBubbleMenu = initSwiper(".bubble-swiper");
+var swiperCoffeMenu = initSwiper(".coffee-swiper");
 
 var swiper = new Swiper(".other-item-content", {
   direction: "vertical",

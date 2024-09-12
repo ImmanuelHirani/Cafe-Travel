@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
   </head>
@@ -96,9 +97,9 @@
           <div class="hidden translate-x-1/2 lg:absolute right-1/2 middle-nav font-magilo lg:block">
             <div class="flex items-center justify-center gap-16 2xl:gap-20 link-wrapper">
               <a href="index.html" class="text-xl 3xl:text-2xl">Home</a>
-              <a class="text-xl opacity-65 3xl:text-2xl" href="menu.html"> Menu </a>
-              <a class="text-xl opacity-65 3xl:text-2xl" href="custom-pizza.html"> Custom Pizza </a>
-              <a class="text-xl opacity-65 3xl:text-2xl" href="contact-us.html"> Contact </a>
+              <a class="text-xl opacity-80 3xl:text-2xl" href="menu.html"> Menu </a>
+              <a class="text-xl opacity-80 3xl:text-2xl" href="custom-pizza.html"> Custom Pizza </a>
+              <a class="text-xl opacity-80 3xl:text-2xl" href="contact-us.html"> Contact </a>
             </div>
           </div>
           <div class="right-nav">
@@ -159,9 +160,9 @@
         <div id="mobilenavExpand" class="h-0 px-3 overflow-hidden">
           <div class="flex flex-col gap-4 mt-5 link-wrapper">
             <a href="index.html" class="text-2xl">Home</a>
-            <a class="text-2xl opacity-65" href="menu.html"> Menu </a>
-            <a class="text-2xl opacity-65" href="custom-pizza.html"> Custom Pizza </a>
-            <a class="text-2xl opacity-65" href="contact-us.html"> Contact </a>
+            <a class="text-2xl opacity-80" href="menu.html"> Menu </a>
+            <a class="text-2xl opacity-80" href="custom-pizza.html"> Custom Pizza </a>
+            <a class="text-2xl opacity-80" href="contact-us.html"> Contact </a>
           </div>
         </div>
       </nav>
@@ -173,19 +174,19 @@
           <div class="flex flex-col items-center w-full text-center gap-6 lg:gap-9 xl:w-[65%] lg:w-[60%] lg:items-start lg:text-start left-content">
             <h1>Fusion Slice Delight Cafe</h1>
             <h5 class="font-aesthetnova">Enjoy high-quality, homemade cafe</h5>
-            <div class="inline-flex items-center justify-center gap-2 border border-white rounded-md w-fit">
-              <a href="" class="px-6 py-2 text-lg rounded-lg 3xl:text-2xl md:px-12 md:py-3 md:text-xl font-aesthetnova">Explore Now</a>
+            <div id="ExploreBtn" class="relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-md shadow-2xl backdrop-blur-2xl outline outline-1 outline-white w-fit">
+              <a href="" class="px-6 py-2 text-lg font-medium rounded-lg 3xl:text-2xl md:px-12 md:py-3 md:text-xl font-aesthetnova">Explore Now</a>
             </div>
           </div>
           <!-- Right Content -->
-          <div class="flex items-center justify-center w-full xl:w-[35%] lg:w-[40%] md:w-[70%] rounded-full right-content">
-            <img src="asset/Pizza-Hero.png" class="w-full animate-spin-slow" alt="Pizza Hero Image" />
+          <div class="flex items-center justify-center w-full xl:w-[35%] lg:w-[40%] md:w-[70%] rounded-full right-content-hero">
+            <img src="asset/Pizza-Hero.png" class="w-full" alt="Pizza Hero Image" />
           </div>
         </div>
         <video src="asset/Pizza HD_2.mp4" class="absolute inset-0 object-cover w-full h-full -z-10" loop autoplay muted></video>
         <div class="absolute w-full h-full bg-opacity-70 bg-primary-color overlay-bg -z-10"></div>
       </section>
-      <section id="toppings" class="flex items-center overflow-x-hidden lg:h-screen bg-secondary-accent-color">
+      <section id="toppings" class="flex items-center overflow-x-hidden secondary-color-gradient lg:h-screen">
         <div class="container flex flex-col items-center justify-center gap-6 md:gap-12 lg:gap-32 lg:flex-row toppings-content">
           <div class="left-content lg:w-[60%] w-full flex flex-col lg:gap-6 gap-3">
             <h2>Unstoppable</h2>
@@ -195,15 +196,15 @@
             </h6>
           </div>
           <div class="flex lg:flex-row flex-col items-center md:gap-6 gap-3 mx-auto right-content lg:w-[40%] w-full">
-            <div class="2xl:min-w-[500px] 2xl:h-[520px] md:min-w-[450px] md:h-[450px] w-full h-[300px] img-wrap group overflow-hidden relative">
+            <div class="2xl:min-w-[500px] 2xl:h-[520px] md:min-w-[450px] md:h-[450px] w-full h-[300px] img-wrap overflow-hidden group relative">
               <img src="asset/Topping/Topping1.jpg" class="object-cover w-full h-full rounded-lg lg:rounded-none" alt="" />
               <div
-                class="absolute flex items-center justify-center w-16 h-16 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-24 md:h-24 top-3 left-3 bg-opacity-70 box-number"
+                class="absolute flex items-center justify-center w-16 h-16 overflow-hidden transition-all duration-300 ease-in-out rounded-full bg-secondary-accent-color md:w-24 md:h-24 top-3 left-3 bg-opacity-70 box-number backdrop-blur-md"
               >
                 <h3 class="items-start mt-1.5 md:mt-3">01</h3>
               </div>
               <div
-                class="absolute flex items-center justify-center w-full p-3 transition-all duration-300 ease-in-out translate-x-1/2 -translate-y-full bg-black lg:group-hover:-translate-y-full lg:translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+                class="absolute bottom-0 flex items-center justify-center w-full p-3 transition-all duration-300 ease-in-out translate-x-1/2 bg-secondary-accent-color backdrop-blur-md right-1/2 bg-opacity-70 topping-name"
               >
                 <h6 class="text-center">Peperoni</h6>
               </div>
@@ -212,12 +213,12 @@
               <div class="relative 2xl:min-w-[300px] lg:rounded-none rounded-lg 2xl:h-[250px] md:min-w-[150px] md:h-[215px] min-w-[150px] h-[139px] img-wrap group overflow-hidden">
                 <img src="asset/Topping/Topping2.png" class="object-cover w-full h-full" alt="" />
                 <div
-                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
+                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out rounded-full bg-secondary-accent-color backdrop-blur-md md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
                 >
                   <h5 class="items-start md:mt-3 mt-1.5">02</h5>
                 </div>
                 <div
-                  class="absolute flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 -translate-y-full bg-black lg:group-hover:-translate-y-full lg:translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+                  class="absolute bottom-0 flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 bg-secondary-accent-color backdrop-blur-md right-1/2 bg-opacity-70 h-fit topping-name"
                 >
                   <h6 class="text-center">Mushroom</h6>
                 </div>
@@ -225,12 +226,12 @@
               <div class="relative 2xl:min-w-[300px] lg:rounded-none rounded-lg 2xl:h-[250px] md:min-w-[150px] md:h-[215px] min-w-[150px] h-[139px] img-wrap group overflow-hidden">
                 <img src="asset/Topping/Topping3.png" class="object-cover w-full h-full" alt="" />
                 <div
-                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
+                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out rounded-full bg-secondary-accent-color backdrop-blur-md md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
                 >
                   <h5 class="items-start md:mt-3 mt-1.5">03</h5>
                 </div>
                 <div
-                  class="absolute flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 -translate-y-full bg-black lg:group-hover:-translate-y-full lg:translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+                  class="absolute bottom-0 flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 bg-secondary-accent-color backdrop-blur-md right-1/2 bg-opacity-70 h-fit topping-name"
                 >
                   <h6 class="text-center">Onion</h6>
                 </div>
@@ -238,12 +239,12 @@
               <div class="relative 2xl:min-w-[300px] lg:rounded-none rounded-lg 2xl:h-[250px] md:min-w-[150px] md:h-[215px] min-w-[150px] h-[139px] img-wrap group overflow-hidden">
                 <img src="asset/Topping/Topping4.png" class="object-cover w-full h-full" alt="" />
                 <div
-                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
+                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out rounded-full bg-secondary-accent-color backdrop-blur-md md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
                 >
                   <h5 class="items-start md:mt-3 mt-1.5">04</h5>
                 </div>
                 <div
-                  class="absolute flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 -translate-y-full bg-black lg:group-hover:-translate-y-full lg:translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+                  class="absolute bottom-0 flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 bg-secondary-accent-color backdrop-blur-md right-1/2 bg-opacity-70 h-fit topping-name"
                 >
                   <h6 class="text-center">Sausage</h6>
                 </div>
@@ -251,12 +252,12 @@
               <div class="relative 2xl:min-w-[300px] lg:rounded-none rounded-lg 2xl:h-[250px] md:min-w-[150px] md:h-[215px] min-w-[150px] h-[139px] img-wrap group overflow-hidden">
                 <img src="asset/Topping/Topping5.png" class="object-cover w-full h-full" alt="" />
                 <div
-                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
+                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out rounded-full bg-secondary-accent-color backdrop-blur-md md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
                 >
                   <h5 class="items-start md:mt-3 mt-1.5">05</h5>
                 </div>
                 <div
-                  class="absolute flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 -translate-y-full bg-black lg:group-hover:-translate-y-full lg:translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+                  class="absolute bottom-0 flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 bg-secondary-accent-color backdrop-blur-md right-1/2 bg-opacity-70 h-fit topping-name"
                 >
                   <h6 class="text-center">Cheese</h6>
                 </div>
@@ -264,12 +265,12 @@
               <div class="relative 2xl:min-w-[300px] lg:rounded-none rounded-lg 2xl:h-[250px] md:min-w-[150px] md:h-[215px] min-w-[150px] h-[139px] img-wrap group overflow-hidden">
                 <img src="asset/Topping/Topping6.png" class="object-cover w-full h-full" alt="" />
                 <div
-                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
+                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out rounded-full bg-secondary-accent-color backdrop-blur-md md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
                 >
                   <h5 class="items-start md:mt-3 mt-1.5">06</h5>
                 </div>
                 <div
-                  class="absolute flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 -translate-y-full bg-black lg:group-hover:-translate-y-full lg:translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+                  class="absolute bottom-0 flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 bg-secondary-accent-color backdrop-blur-md right-1/2 bg-opacity-70 h-fit topping-name"
                 >
                   <h6 class="text-center">Tomato</h6>
                 </div>
@@ -277,12 +278,12 @@
               <div class="relative 2xl:min-w-[300px] lg:rounded-none rounded-lg 2xl:h-[250px] md:min-w-[150px] md:h-[215px] min-w-[150px] h-[139px] img-wrap group overflow-hidden">
                 <img src="asset/Topping/Topping5.png" class="object-cover w-full h-full" alt="" />
                 <div
-                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out bg-black rounded-full md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
+                  class="absolute flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 ease-in-out rounded-full bg-secondary-accent-color backdrop-blur-md md:w-16 md:h-16 top-3 left-3 bg-opacity-70 box-number"
                 >
                   <h5 class="items-start md:mt-3 mt-1.5">07</h5>
                 </div>
                 <div
-                  class="absolute flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 -translate-y-full bg-black lg:group-hover:-translate-y-full lg:translate-y-full right-1/2 bg-opacity-70 h-fit topping-name"
+                  class="absolute bottom-0 flex items-center justify-center w-full p-2 transition-all duration-300 ease-in-out translate-x-1/2 bg-secondary-accent-color backdrop-blur-md right-1/2 bg-opacity-70 h-fit topping-name"
                 >
                   <h6 class="text-center">Peperoni</h6>
                 </div>
@@ -299,106 +300,152 @@
           <div class="w-full overflow-x-hidden swiper">
             <div class="customTopping">
               <div class="swiper-wrapper">
-                <div class="relative rounded-2xl swiper-slide">
-                  <div class="content-topping">
-                    <img src="asset/Topping/Chocco.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                <div class="swiper-slide">
+                  <div class="relative overflow-hidden rounded-2xl scale-[0.9] opacity-50 topping-wrapper transition-all ease-in-out duration-500">
+                    <div class="content-topping">
+                      <img src="asset/Topping/Cheess.png" class="object-cover w-full h-full transition-all duration-500 ease-in-out rounded-2xl" alt="" />
+                    </div>
+                    <div
+                      class="absolute w-12 h-12 p-3 transition-all duration-500 ease-in-out -translate-y-full bg-opacity-50 rounded-full opacity-0 md:w-16 md:h-16 top-2 topping-logo right-2 overlay-icon backdrop-blur-md bg-primary-color outline outline-2 outline-white"
+                    >
+                      <img src="asset/Topping/chees - logo.png" class="w-[100%]" alt="" />
+                    </div>
+                    <figcaption
+                      class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl right-1/2 w-full text-center backdrop-blur-md overlay-content-title"
+                    >
+                      <h6>Chees</h6>
+                    </figcaption>
                   </div>
-                  <figcaption
-                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
-                  >
-                    <h6>Dark Chocolate</h6>
-                  </figcaption>
                 </div>
-                <div class="relative rounded-2xl swiper-slide">
-                  <div class="content-topping">
-                    <img src="asset/Topping/Cheess.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                <div class="swiper-slide">
+                  <div class="relative overflow-hidden rounded-2xl scale-[0.9] opacity-50 topping-wrapper transition-all ease-in-out duration-500">
+                    <div class="content-topping">
+                      <img src="asset/Topping/jam.png" class="object-cover w-full h-full transition-all duration-500 ease-in-out rounded-2xl image-topping" alt="" />
+                    </div>
+                    <div
+                      class="absolute w-12 h-12 p-3 transition-all duration-500 ease-in-out -translate-y-full bg-opacity-50 rounded-full opacity-0 md:w-16 md:h-16 top-2 topping-logo right-2 overlay-icon backdrop-blur-md bg-primary-color outline outline-2 outline-white"
+                    >
+                      <img src="asset/Topping/jam - logo.png" class="w-[100%]" alt="" />
+                    </div>
+                    <figcaption
+                      class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl right-1/2 w-full text-center backdrop-blur-md overlay-content-title"
+                    >
+                      <h6>Strawberry Jam</h6>
+                    </figcaption>
                   </div>
-                  <figcaption
-                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
-                  >
-                    <h6>Chees</h6>
-                  </figcaption>
                 </div>
-                <div class="relative rounded-2xl swiper-slide">
-                  <div class="content-topping">
-                    <img src="asset/Topping/Peanute.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                <div class="swiper-slide">
+                  <div class="relative overflow-hidden rounded-2xl scale-[0.9] opacity-50 topping-wrapper transition-all ease-in-out duration-500">
+                    <div class="content-topping">
+                      <img src="asset/Topping/Chocco.png" class="object-cover w-full h-full transition-all duration-500 ease-in-out rounded-2xl image-topping" alt="" />
+                    </div>
+                    <div
+                      class="absolute w-12 h-12 p-3 transition-all duration-500 ease-in-out -translate-y-full bg-opacity-50 rounded-full opacity-0 md:w-16 md:h-16 top-2 topping-logo right-2 overlay-icon backdrop-blur-md bg-primary-color outline outline-2 outline-white"
+                    >
+                      <img src="asset/Topping/choco - logo.png" class="w-[100%]" alt="" />
+                    </div>
+                    <figcaption
+                      class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl right-1/2 w-full text-center backdrop-blur-md overlay-content-title"
+                    >
+                      <h6>Nuttela Chocolate</h6>
+                    </figcaption>
                   </div>
-                  <figcaption
-                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
-                  >
-                    <h6>Peanute</h6>
-                  </figcaption>
                 </div>
-                <div class="relative rounded-2xl swiper-slide">
-                  <div class="content-topping">
-                    <img src="asset/Topping/Chocco.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                <div class="swiper-slide">
+                  <div class="relative overflow-hidden rounded-2xl scale-[0.9] opacity-50 topping-wrapper transition-all ease-in-out duration-500">
+                    <div class="content-topping">
+                      <img src="asset/Topping/Cheess.png" class="object-cover w-full h-full transition-all duration-500 ease-in-out rounded-2xl image-topping" alt="" />
+                    </div>
+                    <div
+                      class="absolute w-12 h-12 p-3 transition-all duration-500 ease-in-out -translate-y-full bg-opacity-50 rounded-full opacity-0 md:w-16 md:h-16 top-2 topping-logo right-2 overlay-icon backdrop-blur-md bg-primary-color outline outline-2 outline-white"
+                    >
+                      <img src="asset/Topping/chees - logo.png" class="w-[100%]" alt="" />
+                    </div>
+                    <figcaption
+                      class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl right-1/2 w-full text-center backdrop-blur-md overlay-content-title"
+                    >
+                      <h6>MozaRella</h6>
+                    </figcaption>
                   </div>
-                  <figcaption
-                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
-                  >
-                    <h6>Nuttela Chocolate</h6>
-                  </figcaption>
                 </div>
-                <div class="relative rounded-2xl swiper-slide">
-                  <div class="content-topping">
-                    <img src="asset/Topping/Cheess.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                <div class="swiper-slide">
+                  <div class="relative overflow-hidden rounded-2xl scale-[0.9] opacity-50 topping-wrapper transition-all ease-in-out duration-500">
+                    <div class="content-topping">
+                      <img src="asset/Topping/Peanute.png" class="object-cover w-full h-full transition-all duration-500 ease-in-out rounded-2xl image-topping" alt="" />
+                    </div>
+                    <div
+                      class="absolute w-12 h-12 p-3 transition-all duration-500 ease-in-out -translate-y-full bg-opacity-50 rounded-full opacity-0 md:w-16 md:h-16 top-2 topping-logo right-2 overlay-icon backdrop-blur-md bg-primary-color outline outline-2 outline-white"
+                    >
+                      <img src="asset/Topping/peanute - logo.png" class="w-[100%]" alt="" />
+                    </div>
+                    <figcaption
+                      class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl right-1/2 w-full text-center backdrop-blur-md overlay-content-title"
+                    >
+                      <h6>Peanute</h6>
+                    </figcaption>
                   </div>
-                  <figcaption
-                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
-                  >
-                    <h6>MozaRella</h6>
-                  </figcaption>
                 </div>
-                <div class="relative rounded-2xl swiper-slide">
-                  <div class="content-topping">
-                    <img src="asset/Topping/Peanute.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                <div class="swiper-slide">
+                  <div class="relative overflow-hidden rounded-2xl scale-[0.9] opacity-50 topping-wrapper transition-all ease-in-out duration-500">
+                    <div class="content-topping">
+                      <img src="asset/Topping/Chocco.png" class="object-cover w-full h-full transition-all duration-500 ease-in-out rounded-2xl image-topping" alt="" />
+                    </div>
+                    <div
+                      class="absolute w-12 h-12 p-3 transition-all duration-500 ease-in-out -translate-y-full bg-opacity-50 rounded-full opacity-0 md:w-16 md:h-16 top-2 topping-logo right-2 overlay-icon backdrop-blur-md bg-primary-color outline outline-2 outline-white"
+                    >
+                      <img src="asset/Topping/choco - logo.png" class="w-[100%]" alt="" />
+                    </div>
+                    <figcaption
+                      class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl right-1/2 w-full text-center backdrop-blur-md overlay-content-title"
+                    >
+                      <h6>Slime Choco</h6>
+                    </figcaption>
                   </div>
-                  <figcaption
-                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
-                  >
-                    <h6>Peanute</h6>
-                  </figcaption>
                 </div>
-                <div class="relative rounded-2xl swiper-slide">
-                  <div class="content-topping">
-                    <img src="asset/Topping/Chocco.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                <div class="swiper-slide">
+                  <div class="relative overflow-hidden rounded-2xl scale-[0.9] opacity-50 topping-wrapper transition-all ease-in-out duration-500">
+                    <div class="content-topping">
+                      <img src="asset/Topping/blueberry.png" class="object-cover w-full h-full transition-all duration-500 ease-in-out rounded-2xl image-topping" alt="" />
+                    </div>
+                    <div
+                      class="absolute w-12 h-12 p-3 transition-all duration-500 ease-in-out -translate-y-full bg-opacity-50 rounded-full opacity-0 md:w-16 md:h-16 top-2 topping-logo right-2 overlay-icon backdrop-blur-md bg-primary-color outline outline-2 outline-white"
+                    >
+                      <img src="asset/Topping/jam - logo.png" class="w-[100%]" alt="" />
+                    </div>
+                    <figcaption
+                      class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl right-1/2 w-full text-center backdrop-blur-md overlay-content-title"
+                    >
+                      <h6>Blueberry Jam</h6>
+                    </figcaption>
                   </div>
-                  <figcaption
-                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
-                  >
-                    <h6>Slime Choco</h6>
-                  </figcaption>
                 </div>
-                <div class="relative rounded-2xl swiper-slide">
-                  <div class="content-topping">
-                    <img src="asset/Topping/Cheess.png" class="object-cover w-full h-full rounded-2xl" alt="" />
+                <div class="swiper-slide">
+                  <div class="relative overflow-hidden rounded-2xl scale-[0.9] opacity-50 topping-wrapper transition-all ease-in-out duration-500">
+                    <div class="content-topping">
+                      <img src="asset/Topping/Peanute.png" class="object-cover w-full h-full transition-all duration-500 ease-in-out rounded-2xl image-topping" alt="" />
+                    </div>
+                    <div
+                      class="absolute w-12 h-12 p-3 transition-all duration-500 ease-in-out -translate-y-full bg-opacity-50 rounded-full opacity-0 md:w-16 md:h-16 top-2 topping-logo right-2 overlay-icon backdrop-blur-md bg-primary-color outline outline-2 outline-white"
+                    >
+                      <img src="asset/Topping/peanute - logo.png" class="w-[100%]" alt="" />
+                    </div>
+                    <figcaption
+                      class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl right-1/2 w-full text-center backdrop-blur-md overlay-content-title"
+                    >
+                      <h6>Peanute butter</h6>
+                    </figcaption>
                   </div>
-                  <figcaption
-                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
-                  >
-                    <h6>Cheedar Cheess</h6>
-                  </figcaption>
-                </div>
-                <div class="relative rounded-2xl swiper-slide">
-                  <div class="content-topping">
-                    <img src="asset/Topping/Peanute.png" class="object-cover w-full h-full rounded-2xl" alt="" />
-                  </div>
-                  <figcaption
-                    class="absolute bottom-0 translate-x-1/2 translate-y-full md:p-4 p-2.5 opacity-0 transition-all ease-in-out duration-500 rounded-b-2xl bg-opacity-80 right-1/2 w-full text-center bg-secondary-accent-color overlay-content-title"
-                  >
-                    <h6>Peanute butter</h6>
-                  </figcaption>
                 </div>
               </div>
             </div>
           </div>
-          <div class="container relative flex items-center justify-between w-full">
+          <div class="container relative flex items-center justify-between w-full mt-4 md:mt-0">
             <div class="flex gap-4 swiper-custom-nav">
               <svg
                 id="prev"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 42 42"
-                class="relative stroke-accent-color w-10 transition-all duration-300 ease-in-out md:w-[52px] opacity-30 hover:opacity-100"
+                class="relative stroke-accent-color w-10 transition-all duration-300 ease-in-out 3xl:w-[11%] md:w-[10%] opacity-30 hover:opacity-100"
                 fill="none"
               >
                 <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" />
@@ -407,7 +454,7 @@
               <svg
                 id="next"
                 xmlns="http://www.w3.org/2000/svg"
-                class="relative w-10 transition-all duration-300 stroke-accent-color ease-in-out md:w-[52px] opacity-30 hover:opacity-100"
+                class="relative w-10 transition-all duration-300 stroke-accent-color ease-in-out 3xl:w-[11%] md:w-[10%] opacity-30 hover:opacity-100"
                 viewBox="0 0 42 42"
                 fill="none"
               >
@@ -415,8 +462,17 @@
                 <path d="M14 21L28 21M28 21L24 25M28 21L24 17" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
-            <div class="inline-flex items-center justify-center gap-2 border border-white rounded-md w-fit">
-              <a href="" class="px-6 py-2 text-sm rounded-lg md:px-12 md:py-3 md:text-xl font-aesthetnova">Custom Now</a>
+            <div
+              id="btn-custom"
+              class="relative inline-flex items-center justify-center overflow-hidden transition-all duration-500 ease-in-out rounded-full outline outline-1 hover:outline-none hover:bg-secondary-color backdrop-blur-lg outline-white md:w-[4em] w-[2.5em] h-[2.5em] hover:w-[10em] md:hover:w-[15.5em] will-change-transform md:h-[4em]"
+            >
+              <a
+                href="custom-pizza.html"
+                class="flex items-center w-full gap-2 px-6 py-2 overflow-hidden text-sm transition-all duration-500 ease-in-out rounded-lg md:gap-4 group 3xl:text-2xl md:px-8 md:py-3 md:text-xl font-aesthetnova"
+              >
+                <i class="self-center text-xl transition-all duration-500 ease-in-out -translate-x-1/2 md:text-3xl ti ti-pizza ti-pencil group-hover:translate-x-0"></i>
+                <div class="pr-4 text-sm font-medium transition-opacity duration-500 ease-in-out opacity-0 whitespace-nowrap group-hover:opacity-100 md:text-2xl">Custom Now</div>
+              </a>
             </div>
           </div>
         </div>
@@ -432,29 +488,47 @@
             </h6>
           </div>
           <div class="flex flex-col gap-10 mt-6 lg:gap-20 lg:mt-20 main-content">
-            <div class="flex flex-col items-center grid-cols-2 gap-4 lg:grid md:gap-12 coffee">
+            <div class="flex flex-col items-center grid-cols-2 gap-6 lg:grid md:gap-12 coffee">
               <img src="asset/Coffe menu/capuccino Coffe.jpg" class="rounded-[20px] 3xl:w-[750px] xl:w-[536px] w-full 3xl:h-[450px] h-[347px] object-cover" alt="" />
-              <div class="flex flex-col gap-4 md:gap-8 desc-content">
+              <div class="flex flex-col gap-6 md:gap-8 desc-content">
                 <h4>Capuccino Coffee</h4>
                 <p class="text-base text-justify md:text-2xl font-aesthetnova">
                   In this cup, a rich coffee with beautiful latte art is served, bringing warmth and a delightful aroma. This coffee is perfectly brewed to offer an ideal moment of relaxation,
                   enhancing your day with an elegant and satisfying indulgence.
                 </p>
-                <a href="" class="flex items-center justify-center w-full px-6 py-2 text-lg border border-white rounded-md ms-auto md:w-fit md:px-12 md:py-3 md:text-xl font-aesthetnova"
-                  >See More Coffee Menu</a
+                <div
+                  class="relative inline-flex items-center justify-center ms-auto overflow-hidden transition-all duration-500 ease-in-out rounded-full outline outline-1 hover:outline-none hover:bg-secondary-color backdrop-blur-lg outline-white md:w-[4em] w-[2.5em] h-[2.5em] hover:w-[13em] md:hover:w-[21em] will-change-transform md:h-[4em]"
                 >
+                  <a
+                    href="custom-pizza.html"
+                    class="flex items-center w-full gap-2 px-6 py-2 overflow-hidden text-sm transition-all duration-500 ease-in-out rounded-lg md:gap-4 group 3xl:text-2xl md:px-8 md:py-3 md:text-xl font-aesthetnova"
+                  >
+                    <i class="self-center text-xl transition-all duration-500 ease-in-out -translate-x-1/2 ti ti-coffee md:text-3xl group-hover:translate-x-0"></i>
+
+                    <div class="pr-4 text-sm font-medium transition-opacity duration-500 ease-in-out opacity-0 whitespace-nowrap group-hover:opacity-100 md:text-2xl">See More Coffe Menu</div>
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="flex flex-col-reverse items-center justify-between grid-cols-2 gap-4 md:gap-12 lg:grid bubble">
-              <div class="flex flex-col gap-4 md:gap-8 desc-content">
+            <div class="flex flex-col-reverse items-center justify-between grid-cols-2 gap-6 md:gap-12 lg:grid bubble">
+              <div class="flex flex-col gap-6 md:gap-8 desc-content">
                 <h4>Melted Choco Bubble</h4>
                 <p class="text-base text-justify md:text-2xl font-aesthetnova">
                   This drink is a refreshing bubble ice, featuring a sweet touch and the chewy texture of enticing boba pearls. Cold and delicious, it offers perfect refreshment, adding enjoyment to
                   every sip and complementing your relaxing experience at our café.
                 </p>
-                <a href="" class="flex items-center justify-center w-full px-6 py-2 text-lg border border-white rounded-md md:w-fit md:px-12 md:py-3 md:text-xl font-aesthetnova"
-                  >See more Bubble Menu</a
+                <div
+                  class="relative inline-flex items-center justify-center overflow-hidden transition-all duration-500 ease-in-out rounded-full outline outline-1 hover:outline-none hover:bg-secondary-color backdrop-blur-lg outline-white md:w-[4em] w-[2.5em] h-[2.5em] hover:w-[14em] md:hover:w-[22em] will-change-transform md:h-[4em]"
                 >
+                  <a
+                    href="custom-pizza.html"
+                    class="flex items-center w-full gap-2 px-6 py-2 overflow-hidden text-sm transition-all duration-500 ease-in-out rounded-lg md:gap-4 group 3xl:text-2xl md:px-8 md:py-3 md:text-xl font-aesthetnova"
+                  >
+                    <i class="self-center text-xl transition-all duration-500 ease-in-out -translate-x-1/2 ti ti-bubble-tea md:text-3xl group-hover:translate-x-0"></i>
+
+                    <div class="pr-4 text-sm font-medium transition-opacity duration-500 ease-in-out opacity-0 whitespace-nowrap group-hover:opacity-100 md:text-2xl">See more Bubble Menu</div>
+                  </a>
+                </div>
               </div>
               <div class="flex w-full place-content-end wrap">
                 <img src="asset/Booba Menu/Choco bobba.jpg" class="rounded-[20px] 3xl:w-[750px] xl:w-[536px] w-full 3xl:h-[450px] h-[347px] object-cover" alt="" />
@@ -464,13 +538,13 @@
         </div>
       </section>
       <!-- SideBar  -->
-      <div id="sidebarCart" class="fixed inset-0 z-50 flex items-center justify-end transition-all duration-[400ms] ease-linear translate-x-full font-aesthetnova">
+      <div id="sidebarCart" class="fixed inset-0 z-50 flex items-center justify-end translate-x-full transition-all duration-[400ms] w-full ease-linear font-aesthetnova">
         <div class="flex w-full h-full max-w-3xl">
           <!-- Others Also Bought Section -->
           <div class="md:w-[38%] md:block hidden bg-[#090E1A] bg-opacity-85">
             <h6 class="mt-8 mb-4 font-semibold text-center">OTHERS ALSO BOUGHT</h6>
             <div class="swiper">
-              <div class="px-4 pb-8 3xl:max-h-[52.5rem] 2xl:max-h-[39rem] xl:max-h-[43em] other-item-content">
+              <div class="px-4 pb-8 pt-4 3xl:max-h-[52.5rem] 2xl:max-h-[39rem] xl:max-h-[43em] other-item-content">
                 <div class="swiper-wrapper">
                   <!-- Repeat this block for each item -->
                   <div class="swiper-slide">
@@ -586,7 +660,7 @@
             </div>
             <hr />
             <div class="w-full swiper">
-              <div class="my-2 3xl:max-h-[630px] 2xl:max-h-[440px] xl:max-h-[31em] max-h-[24em] sm:max-h-[38em] w-full cart-added-content overflow-hidden">
+              <div class="my-2 3xl:max-h-[40em] 2xl:max-h-[27em] xl:max-h-[31em] max-h-[24em] sm:max-h-[38em] w-full cart-added-content overflow-hidden">
                 <!-- Repeat this block for each cart item -->
                 <div class="h-fit swiper-wrapper">
                   <div class="swiper-slide">
@@ -999,7 +1073,7 @@
         </div>
       </div>
       <!-- Login & register Box -->
-      <div id="LoginRegisterBox" class="fixed inset-0 z-50 flex items-center justify-center invisible bg-black opacity-0 bg-opacity-70 add-to-cart-quick-list font-aesthetnova">
+      <div id="LoginRegisterBox" class="fixed inset-0 z-50 flex items-center justify-center invisible opacity-0 bg-secondary-accent-color bg-opacity-70 add-to-cart-quick-list font-aesthetnova">
         <div
           id="LoginBox"
           class="relative flex flex-col md:flex-row w-[90%] justify-center overflow-hidden md:w-[45%] h-[400px] md:h-[550px] p-4 md:p-8 gap-6 md:gap-9 rounded-lg bg-secondary-accent-color box-cart"
@@ -1025,7 +1099,7 @@
                 />
               </svg>
             </div>
-            <button type="submit" class="w-full py-3 mt-3 rounded-lg bg-secondary-color">Login</button>
+            <a href="profile.html" class="w-full py-3 mt-3 text-center rounded-lg bg-secondary-color">Login</a>
             <p class="text-center">Don't Have Account ? <span id="RegisterBoxOpen" class="text-red-500 cursor-pointer">Sign Up</span></p>
           </form>
           <img src="asset/Bobba-login.png" class="absolute w-[10%] bottom-0 right-0" alt="" />
